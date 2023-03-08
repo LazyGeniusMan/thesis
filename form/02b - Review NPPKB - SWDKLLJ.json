@@ -1,0 +1,485 @@
+{
+  "meta": {
+    "id": "71eecf77-c428-4f43-9b88-5773a770178e",
+    "name": "Skripsi PKB - Review SW",
+    "description": "Review SW",
+    "title": "Review SW"
+  },
+  "views": [
+    {
+      "id": "NX_CUOCFh8A",
+      "type": "container",
+      "options": {
+        "color": "#000000",
+        "height": "auto",
+        "width": "auto"
+      },
+      "container": true,
+      "content": [
+        {
+          "id": "NX_AUCOUSvi",
+          "type": "nx:task-form",
+          "options": {
+            "actionName": "review_sw_action",
+            "actions": ["semua benar", "ada kesalahan"],
+            "color": "#000000",
+            "comment": true,
+            "commentBinding": "comment",
+            "commentLabel": "Comment",
+            "commentLayout": 0,
+            "commentName": "comment",
+            "commentPlaceholder": "Your comment",
+            "context": "nextflow_user_task"
+          },
+          "container": true,
+          "content": [
+            {
+              "id": "NX_OKi6mUUO",
+              "type": "section",
+              "options": {
+                "color": "#000000",
+                "height": "auto",
+                "title": "Data Pendaftaran",
+                "width": "auto"
+              },
+              "container": true,
+              "content": [
+                {
+                  "id": "NX_huqKSyiJ",
+                  "type": "text",
+                  "name": "pendaftaran_tgl",
+                  "options": {
+                    "binding": "variables.pendaftaran_tgl",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "label": "Tanggal Pendaftaran",
+                    "layout": 0,
+                    "readonly": true
+                  }
+                },
+                {
+                  "id": "NX_q8AK8GKO",
+                  "type": "text",
+                  "name": "pendaftaran_jenis",
+                  "options": {
+                    "binding": "variables.pendaftaran_jenis",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "label": "Jenis Pendaftaran",
+                    "layout": 0,
+                    "readonly": true
+                  }
+                }
+              ]
+            },
+            {
+              "id": "NX_ZA16G5S2",
+              "type": "section",
+              "options": {
+                "color": "#000000",
+                "height": "auto",
+                "title": "Data Wajib Pajak",
+                "width": "auto"
+              },
+              "container": true,
+              "content": [
+                {
+                  "id": "NX_FJ5gCFYi",
+                  "type": "text",
+                  "name": "wp_nik_nib",
+                  "options": {
+                    "binding": "variables.wp_nik_nib",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "label": "NIK/NIB",
+                    "readonly": true
+                  }
+                },
+                {
+                  "id": "NX_lAFqJG68",
+                  "type": "text",
+                  "name": "wp_nama",
+                  "options": {
+                    "binding": "variables.wp_nama",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "label": "Nama",
+                    "readonly": true
+                  }
+                },
+                {
+                  "id": "NX_2NTGYTK2",
+                  "type": "textArea",
+                  "name": "wp_alamat",
+                  "options": {
+                    "binding": "variables.wp_alamat",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "label": "Alamat",
+                    "layout": 0,
+                    "readonly": true
+                  }
+                },
+                {
+                  "id": "NX_26zBAJUb",
+                  "type": "text",
+                  "name": "wp_kategori",
+                  "options": {
+                    "binding": "variables.wp_kategori",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "label": "Kategori",
+                    "readonly": true
+                  }
+                }
+              ]
+            },
+            {
+              "id": "NX_AozS6UTl",
+              "type": "section",
+              "options": {
+                "color": "#000000",
+                "height": "auto",
+                "title": "Data Kendaraan",
+                "width": "auto"
+              },
+              "container": true,
+              "content": [
+                {
+                  "id": "NX_Aqg86o1o",
+                  "type": "text",
+                  "name": "op_no_reg",
+                  "options": {
+                    "binding": "variables.op_no_reg",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "label": "Nomor Registrasi",
+                    "layout": 0,
+                    "readonly": true
+                  }
+                },
+                {
+                  "id": "NX_KgJKymO8",
+                  "type": "text",
+                  "name": "op_urutan_kepemilikan",
+                  "options": {
+                    "binding": "variables.op_urutan_kepemilikan",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "label": "Urutan Kepemilikan",
+                    "layout": 0,
+                    "readonly": true
+                  }
+                },
+                {
+                  "id": "NX_Jz1bJ12B",
+                  "type": "container",
+                  "options": {
+                    "color": "#000000",
+                    "column": "2",
+                    "height": "auto",
+                    "width": "auto"
+                  },
+                  "container": true,
+                  "content": [
+                    {
+                      "id": "NX_NKvuB2Oq",
+                      "type": "text",
+                      "name": "op_merk",
+                      "options": {
+                        "binding": "variables.op_merk",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Merk",
+                        "readonly": true
+                      }
+                    },
+                    {
+                      "id": "NX_1YiN1FPi",
+                      "type": "text",
+                      "name": "op_warna",
+                      "options": {
+                        "binding": "variables.op_warna",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Warna",
+                        "readonly": true
+                      }
+                    },
+                    {
+                      "id": "NX_PCigKzqo",
+                      "type": "text",
+                      "name": "op_tipe",
+                      "options": {
+                        "binding": "variables.op_tipe",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Tipe",
+                        "readonly": true
+                      }
+                    },
+                    {
+                      "id": "NX_Ym8KZJGh",
+                      "type": "text",
+                      "name": "op_bahan_bakar",
+                      "options": {
+                        "binding": "variables.op_bahan_bakar",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Bahan Bakar",
+                        "readonly": true
+                      }
+                    },
+                    {
+                      "id": "NX_ShP6mboO",
+                      "type": "text",
+                      "name": "op_jenis",
+                      "options": {
+                        "binding": "variables.op_jenis",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Jenis",
+                        "readonly": true
+                      }
+                    },
+                    {
+                      "id": "NX_YYlyB6S5",
+                      "type": "text",
+                      "name": "op_warna_tnkb",
+                      "options": {
+                        "binding": "variables.op_warna_tnkb",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Warna TNKB",
+                        "readonly": true
+                      }
+                    },
+                    {
+                      "id": "NX_q5B2KAgK",
+                      "type": "text",
+                      "name": "op_model",
+                      "options": {
+                        "binding": "variables.op_model",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Model",
+                        "layout": 0,
+                        "readonly": true
+                      }
+                    },
+                    {
+                      "id": "NX_Kq5A251v",
+                      "type": "text",
+                      "name": "op_tahun_registrasi",
+                      "options": {
+                        "binding": "variables.op_tahun_registrasi",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Tahun Registrasi",
+                        "readonly": true
+                      }
+                    },
+                    {
+                      "id": "NX_lNTzZqPi",
+                      "type": "text",
+                      "name": "op_golongan",
+                      "options": {
+                        "binding": "variables.op_golongan",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Golongan",
+                        "readonly": true
+                      }
+                    },
+                    {
+                      "id": "NX_uZo6ASy6",
+                      "type": "text",
+                      "name": "op_tahun_pembuatan",
+                      "options": {
+                        "binding": "variables.op_tahun_pembuatan",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Tahun Pembuatan",
+                        "readonly": true
+                      }
+                    },
+                    {
+                      "id": "NX_zSvSJUYF",
+                      "type": "text",
+                      "name": "op_no_bpkb",
+                      "options": {
+                        "binding": "variables.op_no_bpkb",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Nomor BPKB",
+                        "readonly": true
+                      }
+                    },
+                    {
+                      "id": "NX_SYU2GyvB",
+                      "type": "text",
+                      "name": "op_isi_silinder",
+                      "options": {
+                        "binding": "variables.op_isi_silinder",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Isi Silinder",
+                        "readonly": true
+                      }
+                    },
+                    {
+                      "id": "NX_bbUhvBz6",
+                      "type": "text",
+                      "name": "op_kode_lokasi",
+                      "options": {
+                        "binding": "variables.op_kode_lokasi",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Kode Lokasi",
+                        "readonly": true
+                      }
+                    },
+                    {
+                      "id": "NX_ThlYF5BK",
+                      "type": "text",
+                      "name": "op_no_rangka",
+                      "options": {
+                        "binding": "variables.op_no_rangka",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Nomor Rangka",
+                        "layout": 0,
+                        "readonly": true
+                      }
+                    },
+                    {
+                      "id": "NX_AvKgJiUB",
+                      "type": "text",
+                      "name": "op_no_urut_pendaftaran",
+                      "options": {
+                        "binding": "variables.op_no_urut_pendaftaran",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Nomor Urut Pendaftaran",
+                        "layout": 0,
+                        "readonly": true
+                      }
+                    },
+                    {
+                      "id": "NX_vz5loCll",
+                      "type": "text",
+                      "name": "op_no_mesin",
+                      "options": {
+                        "binding": "variables.op_no_mesin",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Nomor Mesin",
+                        "readonly": true
+                      }
+                    },
+                    {
+                      "id": "NX_zK52ABOA",
+                      "type": "text",
+                      "name": "op_tgl_berlaku",
+                      "options": {
+                        "binding": "variables.op_tgl_berlaku",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Berlaku Sampai",
+                        "readonly": true
+                      }
+                    },
+                    {
+                      "id": "NX_SPgiiz6l",
+                      "type": "text",
+                      "name": "op_jumlah_roda",
+                      "options": {
+                        "binding": "variables.op_jumlah_roda",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Jumlah Roda",
+                        "layout": 0,
+                        "readonly": true
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "NX_oqJulO2O",
+              "type": "section",
+              "options": {
+                "color": "#000000",
+                "height": "auto",
+                "title": "Penghitungan SWDKLLJ",
+                "width": "auto"
+              },
+              "container": true,
+              "content": [
+                {
+                  "id": "NX_hTh5T5Th",
+                  "type": "text",
+                  "name": "swdkllj_pokok",
+                  "options": {
+                    "binding": "variables.swdkllj_pokok",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "label": "Pokok SWDKLLJ",
+                    "layout": 0,
+                    "readonly": true
+                  }
+                },
+                {
+                  "id": "NX_zAJOZPGl",
+                  "type": "text",
+                  "name": "swdkllj_denda",
+                  "options": {
+                    "binding": "variables.swdkllj_denda",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "label": "Denda SWDKLLJ",
+                    "layout": 0,
+                    "readonly": true
+                  }
+                },
+                {
+                  "id": "NX_g6GAN21N",
+                  "type": "text",
+                  "name": "swdkllj_kartu",
+                  "options": {
+                    "binding": "variables.swdkllj_kartu",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "defaultValue": "",
+                    "label": "Biaya Kartu",
+                    "layout": 0,
+                    "readonly": true
+                  }
+                },
+                {
+                  "id": "NX_loYOUhoK",
+                  "type": "text",
+                  "name": "swdkllj_total",
+                  "options": {
+                    "binding": "variables.swdkllj_total",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "label": "Total SWDKLLJ",
+                    "readonly": true
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "context": {
+    "nextflow_user_task": {
+      "type": "next:task",
+      "hash": "d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f"
+    }
+  }
+}

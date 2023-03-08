@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" id="definitions_1hf6bjy"
+    name="definitions" namespace="http://camunda.org/schema/1.0/dmn"
+    exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="11.0.1">
+    <decision id="decision_03d34n8" name="">
+        <decisionTable id="decisionTable_193x27e" hitPolicy="FIRST">
+            <input id="InputClause_1n1dx8s" label="Jenis Kendaraan">
+                <inputExpression id="LiteralExpression_1nqf736" typeRef="string">
+                    <text>op_jenis</text>
+                </inputExpression>
+            </input>
+            <input id="input1" label="Golongan Kendaraan">
+                <inputExpression id="inputExpression1" typeRef="string">
+                    <text>op_golongan</text>
+                </inputExpression>
+            </input>
+            <input id="InputClause_07oshgl" label="Jumlah Roda">
+                <inputExpression id="LiteralExpression_1f9vhhl" typeRef="integer">
+                    <text>op_jumlah_roda</text>
+                </inputExpression>
+            </input>
+            <output id="output1" label="Bobot Kendaraan" name="op_bobot" typeRef="double" />
+            <rule id="DecisionRule_10cqwji">
+                <inputEntry id="UnaryTests_0s7os6d">
+                    <text>"MOBIL PENUMPANG"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_000dva7">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_029653z">
+                    <text>3</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0t61pj9">
+                    <text>1</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0iamvan">
+                <inputEntry id="UnaryTests_02bk5lg">
+                    <text>"MOBIL BARANG"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0yvtfx5">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1dmnz5l">
+                    <text>3</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0w2cg4k">
+                    <text>1</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0j9t85z">
+                <inputEntry id="UnaryTests_03e2key">
+                    <text>"SEPEDA MOTOR"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_08on5jz">
+                    <text>"SEPEDA MOTOR RODA 2", "SEPEDA MOTOR RODA 3"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0tq803x">
+                    <text>[2..3]</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0i7mslp">
+                    <text>1</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1we5zyu">
+                <inputEntry id="UnaryTests_0ni0e6q">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_19sayvc">
+                    <text>"SEDAN"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0aypdhy">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1kemotk">
+                    <text>1.025</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_12oikzc">
+                <inputEntry id="UnaryTests_05p19xl">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0zo0loo">
+                    <text>"JEEP"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0zujwts">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0082ub1">
+                    <text>1.050</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1w4kdhx">
+                <inputEntry id="UnaryTests_1gah0l6">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1bjg7xy">
+                    <text>"BLIND VAN","PICK UP","MICROBUS"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1lvl58h">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0iiao1t">
+                    <text>1.085</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0zxd22c">
+                <inputEntry id="UnaryTests_0zfra22">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_02lahf7">
+                    <text>"BUS"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1hdw3jz">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0d60nns">
+                    <text>1.1</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_15kpes0">
+                <inputEntry id="UnaryTests_09uv2ib">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1wywzzw">
+                    <text>"LIGHT TRUCK","TRUCK"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1vw959f">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0aag6h0">
+                    <text>1.3</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+</definitions>

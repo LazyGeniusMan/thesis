@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL"
+  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+  xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+  xmlns:nextflow="http://nextplatform.ai/schema/1.0/bpmn" id="Diagram_1"
+  targetNamespace="http://bpmn.io/schema/bpmn"
+  xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+  <bpmn2:collaboration id="Collaboration_0bbvin3">
+    <bpmn2:participant id="Participant_0rq9npz" name="Pemungutan PKB Tahunan" processRef="Process_1" />
+  </bpmn2:collaboration>
+  <bpmn2:process id="Process_1" isExecutable="false">
+    <bpmn2:laneSet id="LaneSet_1wqpypr">
+      <bpmn2:lane id="Lane_0a0nvfy" name="Sistem Jasa Raharja">
+        <bpmn2:flowNodeRef>Task_1garqyq</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_0br9fxp</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+      <bpmn2:lane id="Lane_0g6ac28" name="Korektor Jasa Raharja">
+        <bpmn2:flowNodeRef>Task_0u6qfyc</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>ExclusiveGateway_13pvz98</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>ExclusiveGateway_1000uk3</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_0tj06ef</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+      <bpmn2:lane id="Lane_0ohzdf1" name="Korektor Bapenda">
+        <bpmn2:flowNodeRef>ExclusiveGateway_04hllm8</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_0m16wk9</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_09zyykt</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+      <bpmn2:lane id="Lane_01pn2st" name="Kasubag Bagian Penetapan">
+        <bpmn2:flowNodeRef>ExclusiveGateway_02i6pdz</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_1asithb</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>ExclusiveGateway_0lelokl</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>ExclusiveGateway_1ra4p9c</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>EndEvent_0jnp6cm</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+      <bpmn2:lane id="Lane_0eo2j1n" name="Kasir">
+        <bpmn2:flowNodeRef>ScriptTask_19m97dr</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_0ojkxz6</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>ExclusiveGateway_0zbg0zm</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_15pye22</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_0zf04jt</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>ExclusiveGateway_055qe8q</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_1m8khb5</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>EndEvent_1ci9oi6</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_0udgayb</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>EndEvent_1gfkdys</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>ExclusiveGateway_1unxd0a</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+      <bpmn2:lane id="Lane_1r817pz" name="Sistem Bapenda">
+        <bpmn2:flowNodeRef>Task_0ppdlq8</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_01nk6ar</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>ExclusiveGateway_1xmjj30</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_1x0uxck</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>ExclusiveGateway_1gneb34</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_0hv8ov4</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_0w75rof</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_1vepd2v</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>ExclusiveGateway_0nfdzba</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>ExclusiveGateway_0yyhilj</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+      <bpmn2:lane id="Lane_0zs17r4" name="Petugas Pendaftaran Korlantas">
+        <bpmn2:flowNodeRef>StartEvent_0ch0tsy</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_1ykedhi</bpmn2:flowNodeRef>
+        <bpmn2:flowNodeRef>Task_1bhwna7</bpmn2:flowNodeRef>
+      </bpmn2:lane>
+    </bpmn2:laneSet>
+    <bpmn2:startEvent id="StartEvent_0ch0tsy" name="Berkas diberikan" nextflow:appName="Skripsi PKB"
+      nextflow:appRef="7d7e2436-eb84-4e85-8544-793ddd8c6e02"
+      nextflow:formName="Skripsi PKB - Initiation"
+      nextflow:formRef="9SsXJFZPss9Wu546TnDP5H4Zg8QiVW6GrJafrNYVdbXW"
+      nextflow:formRefVersion="latest">
+      <bpmn2:outgoing>SequenceFlow_1br2ji4</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:scriptTask id="Task_1ykedhi" name="Menetapkan Tanggal Pendaftaran"
+      scriptFormat="javascript">
+      <bpmn2:incoming>SequenceFlow_1br2ji4</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_0t21xf4</bpmn2:outgoing>
+      <bpmn2:script>let tglHariIni = new Date();
+        let hh = String(tglHariIni.getDate()).padStart(2, '0');
+        let bb = String(tglHariIni.getMonth() + 1).padStart(2, '0');
+        let tttt = tglHariIni.getFullYear();
+
+        tglHariIni = tttt + '-' + bb + '-' + hh;
+        process.variables.pendaftaran_tgl = tglHariIni;</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:userTask id="Task_1bhwna7" name="Mendaftarkan WP dan OP" nextflow:appName="Skripsi PKB"
+      nextflow:appRef="7d7e2436-eb84-4e85-8544-793ddd8c6e02"
+      nextflow:formName="Skripsi PKB - Pendaftaran ERI"
+      nextflow:formRef="9SsXJFZPss9Wu546TnDP5GfCVYVbvDPVBzTkrsMsZ3JK"
+      nextflow:formRefVersion="latest" nextflow:assignee="pendaftaran@demo-skripsi.com"
+      nextflow:formType="nextstudio">
+      <bpmn2:incoming>SequenceFlow_0t21xf4</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_03i3esk</bpmn2:outgoing>
+    </bpmn2:userTask>
+    <bpmn2:scriptTask id="Task_0ppdlq8" name="Mengkonversi Tipe Data" scriptFormat="javascript">
+      <bpmn2:incoming>SequenceFlow_03i3esk</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_14ae938</bpmn2:outgoing>
+      <bpmn2:script>process.variables.op_urutan_kepemilikan =
+        parseInt(process.variables.op_urutan_kepemilikan);
+        process.variables.op_tahun_registrasi = parseInt(process.variables.op_tahun_registrasi);
+        process.variables.op_tahun_pembuatan = parseInt(process.variables.op_tahun_pembuatan);
+        process.variables.op_isi_silinder = parseInt(process.variables.op_isi_silinder);
+        process.variables.op_jumlah_roda = parseInt(process.variables.op_jumlah_roda);</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:businessRuleTask id="Task_01nk6ar" name="Menetapkan Pengenaan Pajak"
+      nextflow:resultHandling="global"
+      nextflow:decisionRef="files:dmn:45dc231e-28a2-47e9-8036-f8cfe3b7dccb"
+      nextflow:decisionName="Skripsi PKB - DMN Pengenaan" nextflow:decisionRefVersion="latest">
+      <bpmn2:incoming>SequenceFlow_0a6qx07</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_0m52i5k</bpmn2:outgoing>
+    </bpmn2:businessRuleTask>
+    <bpmn2:parallelGateway id="ExclusiveGateway_1xmjj30">
+      <bpmn2:incoming>SequenceFlow_14ae938</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_0a6qx07</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_1h69iq0</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_1c9swg5</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_0af8ip7</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_0e1flu5</bpmn2:outgoing>
+    </bpmn2:parallelGateway>
+    <bpmn2:businessRuleTask id="Task_1x0uxck" name="Menetapkan NJKB"
+      nextflow:resultHandling="global"
+      nextflow:decisionRef="files:dmn:8af8bf2b-0611-4108-a014-e4484f37cc6d"
+      nextflow:decisionName="Skripsi PKB - DMN NJKB" nextflow:decisionRefVersion="latest">
+      <bpmn2:incoming>SequenceFlow_1h69iq0</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_0244nk4</bpmn2:outgoing>
+    </bpmn2:businessRuleTask>
+    <bpmn2:parallelGateway id="ExclusiveGateway_1gneb34">
+      <bpmn2:incoming>SequenceFlow_0m52i5k</bpmn2:incoming>
+      <bpmn2:incoming>SequenceFlow_0244nk4</bpmn2:incoming>
+      <bpmn2:incoming>SequenceFlow_03m7fql</bpmn2:incoming>
+      <bpmn2:incoming>SequenceFlow_0sz841a</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_0trn9rr</bpmn2:outgoing>
+    </bpmn2:parallelGateway>
+    <bpmn2:businessRuleTask id="Task_0hv8ov4" name="Menetapkan Bobot"
+      nextflow:resultHandling="global"
+      nextflow:decisionRef="files:dmn:2d8d5549-e7b6-49df-b94f-ebd009993ee3"
+      nextflow:decisionName="Skripsi PKB - DMN Bobot Kendaraan" nextflow:decisionRefVersion="latest">
+      <bpmn2:incoming>SequenceFlow_1c9swg5</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_03m7fql</bpmn2:outgoing>
+    </bpmn2:businessRuleTask>
+    <bpmn2:businessRuleTask id="Task_0w75rof" name="Menetapkan Tarif PKB"
+      nextflow:resultHandling="global"
+      nextflow:decisionRef="files:dmn:a87bf959-2ce9-4be8-8ccb-7b7feae34242"
+      nextflow:decisionName="Skripsi PKB - DMN Tarif" nextflow:decisionRefVersion="latest">
+      <bpmn2:incoming>SequenceFlow_0af8ip7</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_0sz841a</bpmn2:outgoing>
+    </bpmn2:businessRuleTask>
+    <bpmn2:scriptTask id="Task_1vepd2v" name="Menghitung Besaran PKB" scriptFormat="javascript">
+      <bpmn2:incoming>SequenceFlow_0trn9rr</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_1iohxuv</bpmn2:outgoing>
+      <bpmn2:script>let op_pengenaan = process.variables.op_pengenaan;
+        process.variables.op_pengenaan = op_pengenaan.toFixed(2);
+        process.variables.op_njkb = Math.ceil(process.variables.op_njkb/100)*100;
+
+        let op_tarif = process.variables.op_tarif
+        process.variables.op_tarif = op_tarif.toFixed(3);
+
+        let op_bobot = process.variables.op_bobot
+        process.variables.op_bobot = op_bobot.toFixed(3);
+        process.variables.pkb_pokok = process.variables.op_pengenaan * process.variables.op_njkb *
+        process.variables.op_tarif * process.variables.op_bobot;
+        process.variables.pkb_pokok = Math.ceil(process.variables.pkb_pokok/100)*100;
+
+        let pendaftaran_tgl = Date.parse(process.variables.pendaftaran_tgl);
+        let op_tgl_berlaku = Date.parse(process.variables.op_tgl_berlaku);
+
+        if (pendaftaran_tgl &gt; op_tgl_berlaku) {
+        total_hari_telat = (pendaftaran_tgl - op_tgl_berlaku)/1000/60/60/24;
+        total_kelipatan_denda = Math.round((total_hari_telat - 1)/30);
+        process.variables.pkb_denda = process.variables.pkb_pokok * 0.02 * total_kelipatan_denda;
+        process.variables.pkb_denda = Math.ceil(process.variables.pkb_denda/100)*100
+        } else {
+        process.variables.pkb_denda = 0;
+        }
+
+        process.variables.pkb_total = process.variables.pkb_pokok + process.variables.pkb_denda;</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:parallelGateway id="ExclusiveGateway_0nfdzba">
+      <bpmn2:incoming>SequenceFlow_1iohxuv</bpmn2:incoming>
+      <bpmn2:incoming>SequenceFlow_0auo21x</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_1sceczi</bpmn2:outgoing>
+    </bpmn2:parallelGateway>
+    <bpmn2:businessRuleTask id="Task_1garqyq" name="Menetapkan SWDKLLJ"
+      nextflow:resultHandling="global"
+      nextflow:decisionRef="files:dmn:0292b820-23e3-4e2d-849b-a57dc9b1c044"
+      nextflow:decisionName="Skripsi PKB - DMN SWDKLLJ" nextflow:decisionRefVersion="latest">
+      <bpmn2:incoming>SequenceFlow_0e1flu5</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_0rioj8v</bpmn2:outgoing>
+    </bpmn2:businessRuleTask>
+    <bpmn2:scriptTask id="Task_0br9fxp" name="Menghitung Besaran SWDKLLJ" scriptFormat="javascript">
+      <bpmn2:incoming>SequenceFlow_0rioj8v</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_0auo21x</bpmn2:outgoing>
+      <bpmn2:script>process.variables.swdkllj_kartu = 3000;
+        process.variables.swdkllj_pokok = Math.ceil(process.variables.swdkllj_pokok/100)*100;
+
+        let pendaftaran_tgl = Date.parse(process.variables.pendaftaran_tgl);
+        let op_tgl_berlaku = Date.parse(process.variables.op_tgl_berlaku);
+
+        if (pendaftaran_tgl&gt;op_tgl_berlaku) {
+        process.variables.swdkllj_denda = process.variables.swdkllj_pokok;
+        } else {
+        process.variables.swdkllj_denda = 0;
+        }
+
+        process.variables.swdkllj_total = process.variables.swdkllj_pokok +
+        process.variables.swdkllj_denda + process.variables.swdkllj_kartu;</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:userTask id="Task_0u6qfyc" name="Memeriksa Hasil Penetapan SW"
+      nextflow:appName="Skripsi PKB" nextflow:appRef="7d7e2436-eb84-4e85-8544-793ddd8c6e02"
+      nextflow:formName="Skripsi PKB - Review SW"
+      nextflow:formRef="9SsXJFZPss9Wu546TnDP5H9qu14CFxDVM6bGhiQMZ8mz"
+      nextflow:formRefVersion="latest" nextflow:assignee="korektor_jr@demo-skripsi.com"
+      nextflow:formType="nextstudio">
+      <bpmn2:incoming>SequenceFlow_13jgesr</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_1ckvjsv</bpmn2:outgoing>
+    </bpmn2:userTask>
+    <bpmn2:exclusiveGateway id="ExclusiveGateway_13pvz98" name="Ada kesalahan?">
+      <bpmn2:incoming>SequenceFlow_1ckvjsv</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_0qwq17n</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_1vsajiu</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:exclusiveGateway id="ExclusiveGateway_1000uk3">
+      <bpmn2:incoming>SequenceFlow_1vsajiu</bpmn2:incoming>
+      <bpmn2:incoming>SequenceFlow_0q9bqzl</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_0zsimv1</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:sequenceFlow id="SequenceFlow_01ndc2f" name="Tidak" sourceRef="ExclusiveGateway_04hllm8"
+      targetRef="ExclusiveGateway_0lelokl">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression">process.variables.review_pkb_action
+        !== "ada kesalahan"</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="SequenceFlow_1yfoq4x" sourceRef="ExclusiveGateway_02i6pdz"
+      targetRef="ScriptTask_19m97dr" />
+    <bpmn2:sequenceFlow id="SequenceFlow_0q9bqzl" sourceRef="Task_0tj06ef"
+      targetRef="ExclusiveGateway_1000uk3" />
+    <bpmn2:sequenceFlow id="SequenceFlow_1vsajiu" name="Tidak" sourceRef="ExclusiveGateway_13pvz98"
+      targetRef="ExclusiveGateway_1000uk3">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression">process.variables.review_sw_action
+        !== "ada kesalahan"</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="SequenceFlow_0zsimv1" sourceRef="ExclusiveGateway_1000uk3"
+      targetRef="ExclusiveGateway_02i6pdz" />
+    <bpmn2:sequenceFlow id="SequenceFlow_0qwq17n" name="Ya" sourceRef="ExclusiveGateway_13pvz98"
+      targetRef="Task_0tj06ef">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression">process.variables.review_sw_action
+        === "ada kesalahan"</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="SequenceFlow_1ckvjsv" sourceRef="Task_0u6qfyc"
+      targetRef="ExclusiveGateway_13pvz98" />
+    <bpmn2:sequenceFlow id="SequenceFlow_1512kvu" sourceRef="ExclusiveGateway_0yyhilj"
+      targetRef="Task_0m16wk9" />
+    <bpmn2:sequenceFlow id="SequenceFlow_13jgesr" sourceRef="ExclusiveGateway_0yyhilj"
+      targetRef="Task_0u6qfyc" />
+    <bpmn2:sequenceFlow id="SequenceFlow_0auo21x" sourceRef="Task_0br9fxp"
+      targetRef="ExclusiveGateway_0nfdzba" />
+    <bpmn2:sequenceFlow id="SequenceFlow_0rioj8v" sourceRef="Task_1garqyq" targetRef="Task_0br9fxp" />
+    <bpmn2:sequenceFlow id="SequenceFlow_0e1flu5" sourceRef="ExclusiveGateway_1xmjj30"
+      targetRef="Task_1garqyq" />
+    <bpmn2:sequenceFlow id="SequenceFlow_1sceczi" sourceRef="ExclusiveGateway_0nfdzba"
+      targetRef="ExclusiveGateway_0yyhilj" />
+    <bpmn2:sequenceFlow id="SequenceFlow_1iohxuv" sourceRef="Task_1vepd2v"
+      targetRef="ExclusiveGateway_0nfdzba" />
+    <bpmn2:sequenceFlow id="SequenceFlow_0sz841a" sourceRef="Task_0w75rof"
+      targetRef="ExclusiveGateway_1gneb34" />
+    <bpmn2:sequenceFlow id="SequenceFlow_03m7fql" sourceRef="Task_0hv8ov4"
+      targetRef="ExclusiveGateway_1gneb34" />
+    <bpmn2:sequenceFlow id="SequenceFlow_0244nk4" sourceRef="Task_1x0uxck"
+      targetRef="ExclusiveGateway_1gneb34" />
+    <bpmn2:sequenceFlow id="SequenceFlow_0af8ip7" sourceRef="ExclusiveGateway_1xmjj30"
+      targetRef="Task_0w75rof" />
+    <bpmn2:sequenceFlow id="SequenceFlow_1c9swg5" sourceRef="ExclusiveGateway_1xmjj30"
+      targetRef="Task_0hv8ov4" />
+    <bpmn2:sequenceFlow id="SequenceFlow_1h69iq0" sourceRef="ExclusiveGateway_1xmjj30"
+      targetRef="Task_1x0uxck" />
+    <bpmn2:sequenceFlow id="SequenceFlow_0m52i5k" sourceRef="Task_01nk6ar"
+      targetRef="ExclusiveGateway_1gneb34" />
+    <bpmn2:sequenceFlow id="SequenceFlow_0a6qx07" sourceRef="ExclusiveGateway_1xmjj30"
+      targetRef="Task_01nk6ar" />
+    <bpmn2:sequenceFlow id="SequenceFlow_0trn9rr" sourceRef="ExclusiveGateway_1gneb34"
+      targetRef="Task_1vepd2v" />
+    <bpmn2:sequenceFlow id="SequenceFlow_14ae938" sourceRef="Task_0ppdlq8"
+      targetRef="ExclusiveGateway_1xmjj30" />
+    <bpmn2:sequenceFlow id="SequenceFlow_0t21xf4" sourceRef="Task_1ykedhi" targetRef="Task_1bhwna7" />
+    <bpmn2:sequenceFlow id="SequenceFlow_1br2ji4" sourceRef="StartEvent_0ch0tsy"
+      targetRef="Task_1ykedhi" />
+    <bpmn2:sequenceFlow id="SequenceFlow_03i3esk" sourceRef="Task_1bhwna7" targetRef="Task_0ppdlq8" />
+    <bpmn2:exclusiveGateway id="ExclusiveGateway_04hllm8" name="Ada kesalahan?">
+      <bpmn2:incoming>SequenceFlow_0jsqv86</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_10as5s5</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_01ndc2f</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:userTask id="Task_0m16wk9" name="Memeriksa Hasil Penetapan PKB"
+      nextflow:appName="Skripsi PKB" nextflow:appRef="7d7e2436-eb84-4e85-8544-793ddd8c6e02"
+      nextflow:formName="Skripsi PKB - Review PKB"
+      nextflow:formRef="9SsXJFZPss9Wu546TnDP5HA8eNbmdqd4uSCHsXj6hcUt"
+      nextflow:formRefVersion="latest" nextflow:assignee="korektor_bapenda@demo-skripsi.com"
+      nextflow:formType="nextstudio">
+      <bpmn2:incoming>SequenceFlow_1512kvu</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_0jsqv86</bpmn2:outgoing>
+    </bpmn2:userTask>
+    <bpmn2:sequenceFlow id="SequenceFlow_0jsqv86" sourceRef="Task_0m16wk9"
+      targetRef="ExclusiveGateway_04hllm8" />
+    <bpmn2:sequenceFlow id="SequenceFlow_10as5s5" name="Ya" sourceRef="ExclusiveGateway_04hllm8"
+      targetRef="Task_09zyykt">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression">process.variables.review_pkb_action
+        === "ada kesalahan"</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="SequenceFlow_17ptty3" sourceRef="Task_09zyykt" targetRef="Task_1asithb" />
+    <bpmn2:sequenceFlow id="SequenceFlow_0vl26t2" sourceRef="Task_1asithb"
+      targetRef="ExclusiveGateway_1ra4p9c" />
+    <bpmn2:sequenceFlow id="SequenceFlow_0qlc0pa" sourceRef="ExclusiveGateway_0lelokl"
+      targetRef="ExclusiveGateway_02i6pdz" />
+    <bpmn2:userTask id="Task_0tj06ef" name="Memperbaiki Kesalahan" nextflow:appName="Skripsi PKB"
+      nextflow:appRef="7d7e2436-eb84-4e85-8544-793ddd8c6e02"
+      nextflow:formName="Skripsi PKB - Revise NPPKB - SW"
+      nextflow:formRef="9SsXJFZPss9Wu546TnDP5Gup7ccDTejcYUkVAccrRv8v"
+      nextflow:formRefVersion="latest" nextflow:assignee="korektor_jr@demo-skripsi.com"
+      nextflow:formType="nextstudio">
+      <bpmn2:incoming>SequenceFlow_0qwq17n</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_0q9bqzl</bpmn2:outgoing>
+    </bpmn2:userTask>
+    <bpmn2:scriptTask id="ScriptTask_19m97dr" name="Menghitung Total Tagihan"
+      scriptFormat="javascript">
+      <bpmn2:incoming>SequenceFlow_1yfoq4x</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_0b4i7od</bpmn2:outgoing>
+      <bpmn2:script>process.variables.pkb_total = parseInt(process.variables.pkb_total);
+        process.variables.swdkllj_total = parseInt(process.variables.swdkllj_total);
+        process.variables.tagihan_total = process.variables.pkb_total +
+        process.variables.swdkllj_total;</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:userTask id="Task_0ojkxz6" name="Menampilkan NPPKB" nextflow:appName="Skripsi PKB"
+      nextflow:appRef="7d7e2436-eb84-4e85-8544-793ddd8c6e02" nextflow:formName="Skripsi PKB - NPPKB"
+      nextflow:formRef="9SsXJFZPss9Wu546TnDP5GyY4BvthtmNADYrr5kBwyr7"
+      nextflow:formRefVersion="latest" nextflow:assignee="kasir@demo-skripsi.com"
+      nextflow:formType="nextstudio">
+      <bpmn2:incoming>SequenceFlow_0b4i7od</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_1hdurzh</bpmn2:outgoing>
+    </bpmn2:userTask>
+    <bpmn2:exclusiveGateway id="ExclusiveGateway_0zbg0zm" name="Lanjut bayar?">
+      <bpmn2:incoming>SequenceFlow_1hdurzh</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_1jahgwe</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_1s43vr4</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:scriptTask id="Task_15pye22" name="Mengatur Status Tagihan" scriptFormat="javascript">
+      <bpmn2:incoming>SequenceFlow_1jahgwe</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_1bxfg6k</bpmn2:outgoing>
+      <bpmn2:script>process.variables.tagihan_status = "Belum Bayar";</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:userTask id="Task_0zf04jt" name="Menerima Pembayaran" nextflow:appName="Skripsi PKB"
+      nextflow:appRef="7d7e2436-eb84-4e85-8544-793ddd8c6e02"
+      nextflow:formName="Skripsi PKB - Tagihan"
+      nextflow:formRef="9SsXJFZPss9Wu546TnDP5GqUF3abQNFREHZZi7ENKeJU"
+      nextflow:formRefVersion="latest" nextflow:assignee="kasir@demo-skripsi.com"
+      nextflow:formType="nextstudio">
+      <bpmn2:incoming>SequenceFlow_1bxfg6k</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_1pxyf8w</bpmn2:outgoing>
+    </bpmn2:userTask>
+    <bpmn2:exclusiveGateway id="ExclusiveGateway_055qe8q" name="Pembayaran terkonfirmasi?">
+      <bpmn2:incoming>SequenceFlow_1pxyf8w</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_0aour4i</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_0f5an5p</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:scriptTask id="Task_1m8khb5" name="Memperbarui Status Tagihan" scriptFormat="javascript">
+      <bpmn2:incoming>SequenceFlow_0aour4i</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_0zlaube</bpmn2:outgoing>
+      <bpmn2:script>process.variables.tagihan_status = "Lunas";</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:endEvent id="EndEvent_1ci9oi6" name="Pembayaran Diterima">
+      <bpmn2:incoming>SequenceFlow_1x5f8kk</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:userTask id="Task_0udgayb" name="Menampilkan SKKP" nextflow:appName="Skripsi PKB"
+      nextflow:appRef="7d7e2436-eb84-4e85-8544-793ddd8c6e02" nextflow:formName="Skripsi PKB - SKKP"
+      nextflow:formRef="9SsXJFZPss9Wu546TnDP5GiwYFwVA5bjbKTzF2EjgUtf"
+      nextflow:formRefVersion="latest" nextflow:assignee="kasir@demo-skripsi.com"
+      nextflow:formType="nextstudio">
+      <bpmn2:incoming>SequenceFlow_0zlaube</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_1x5f8kk</bpmn2:outgoing>
+    </bpmn2:userTask>
+    <bpmn2:endEvent id="EndEvent_1gfkdys" name="Pembayaran Dibatalkan">
+      <bpmn2:incoming>SequenceFlow_0lnunvj</bpmn2:incoming>
+      <bpmn2:terminateEventDefinition id="TerminateEventDefinition_164qlci" />
+    </bpmn2:endEvent>
+    <bpmn2:exclusiveGateway id="ExclusiveGateway_1unxd0a">
+      <bpmn2:incoming>SequenceFlow_1s43vr4</bpmn2:incoming>
+      <bpmn2:incoming>SequenceFlow_0f5an5p</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_0lnunvj</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:sequenceFlow id="SequenceFlow_0b4i7od" sourceRef="ScriptTask_19m97dr"
+      targetRef="Task_0ojkxz6" />
+    <bpmn2:sequenceFlow id="SequenceFlow_1hdurzh" sourceRef="Task_0ojkxz6"
+      targetRef="ExclusiveGateway_0zbg0zm" />
+    <bpmn2:sequenceFlow id="SequenceFlow_1jahgwe" name="Ya" sourceRef="ExclusiveGateway_0zbg0zm"
+      targetRef="Task_15pye22">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression">process.variables.nppkb_action
+        === "bayar"</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="SequenceFlow_1s43vr4" name="Tidak" sourceRef="ExclusiveGateway_0zbg0zm"
+      targetRef="ExclusiveGateway_1unxd0a">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression">process.variables.nppkb_action
+        === "batal"</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="SequenceFlow_1bxfg6k" sourceRef="Task_15pye22" targetRef="Task_0zf04jt" />
+    <bpmn2:sequenceFlow id="SequenceFlow_1pxyf8w" sourceRef="Task_0zf04jt"
+      targetRef="ExclusiveGateway_055qe8q" />
+    <bpmn2:sequenceFlow id="SequenceFlow_0aour4i" name="Ya" sourceRef="ExclusiveGateway_055qe8q"
+      targetRef="Task_1m8khb5">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression">process.variables.tagihan_action
+        === "konfirmasi pembayaran"</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="SequenceFlow_0f5an5p" name="Tidak" sourceRef="ExclusiveGateway_055qe8q"
+      targetRef="ExclusiveGateway_1unxd0a">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression">process.variables.tagihan_action
+        === "batal"</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="SequenceFlow_0zlaube" sourceRef="Task_1m8khb5" targetRef="Task_0udgayb" />
+    <bpmn2:sequenceFlow id="SequenceFlow_1x5f8kk" sourceRef="Task_0udgayb"
+      targetRef="EndEvent_1ci9oi6" />
+    <bpmn2:sequenceFlow id="SequenceFlow_0lnunvj" sourceRef="ExclusiveGateway_1unxd0a"
+      targetRef="EndEvent_1gfkdys" />
+    <bpmn2:parallelGateway id="ExclusiveGateway_02i6pdz">
+      <bpmn2:incoming>SequenceFlow_0zsimv1</bpmn2:incoming>
+      <bpmn2:incoming>SequenceFlow_0qlc0pa</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_1yfoq4x</bpmn2:outgoing>
+    </bpmn2:parallelGateway>
+    <bpmn2:userTask id="Task_09zyykt" name="Memperbaiki Kesalahan" nextflow:appName="Skripsi PKB"
+      nextflow:appRef="7d7e2436-eb84-4e85-8544-793ddd8c6e02"
+      nextflow:formName="Skripsi PKB - Revise NPPKB - PKB"
+      nextflow:formRef="9SsXJFZPss9Wu546TnDP5HA9vhFHqT7ogkDLfDQpuyfG"
+      nextflow:formRefVersion="latest" nextflow:assignee="korektor_bapenda@demo-skripsi.com"
+      nextflow:formType="nextstudio">
+      <bpmn2:incoming>SequenceFlow_10as5s5</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_17ptty3</bpmn2:outgoing>
+    </bpmn2:userTask>
+    <bpmn2:userTask id="Task_1asithb" name="Approval Override Sistem" nextflow:appName="Skripsi PKB"
+      nextflow:appRef="7d7e2436-eb84-4e85-8544-793ddd8c6e02"
+      nextflow:formName="Skripsi PKB - Approval Override Sistem"
+      nextflow:formRef="9SsXJFZPss9Wu546TnDP5Gvrph3Xz8HfpYrchNc1yPQr"
+      nextflow:formRefVersion="latest" nextflow:assignee="kasubag_penetapan@demo-skripsi.com	"
+      nextflow:formType="nextstudio">
+      <bpmn2:incoming>SequenceFlow_17ptty3</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_0vl26t2</bpmn2:outgoing>
+    </bpmn2:userTask>
+    <bpmn2:exclusiveGateway id="ExclusiveGateway_0lelokl">
+      <bpmn2:incoming>SequenceFlow_01ndc2f</bpmn2:incoming>
+      <bpmn2:incoming>SequenceFlow_10sd64k</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_0qlc0pa</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:exclusiveGateway id="ExclusiveGateway_1ra4p9c" name="Disetujui?">
+      <bpmn2:incoming>SequenceFlow_0vl26t2</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_10sd64k</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_0p3ty3v</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:sequenceFlow id="SequenceFlow_10sd64k" name="Ya" sourceRef="ExclusiveGateway_1ra4p9c"
+      targetRef="ExclusiveGateway_0lelokl">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression">process.variables.override_action
+        === "setuju"</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="SequenceFlow_0p3ty3v" name="Tidak" sourceRef="ExclusiveGateway_1ra4p9c"
+      targetRef="EndEvent_0jnp6cm">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression">process.variables.override_action
+        === "tolak"</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:endEvent id="EndEvent_0jnp6cm" name="Override Sistem Ditolak">
+      <bpmn2:incoming>SequenceFlow_0p3ty3v</bpmn2:incoming>
+      <bpmn2:terminateEventDefinition id="TerminateEventDefinition_0hmfvxo" />
+    </bpmn2:endEvent>
+    <bpmn2:parallelGateway id="ExclusiveGateway_0yyhilj">
+      <bpmn2:incoming>SequenceFlow_1sceczi</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_13jgesr</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_1512kvu</bpmn2:outgoing>
+    </bpmn2:parallelGateway>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_0bbvin3">
+      <bpmndi:BPMNShape id="Participant_0rq9npz_di" bpmnElement="Participant_0rq9npz"
+        isHorizontal="true">
+        <dc:Bounds x="115" y="35" width="1625" height="1515" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0zs17r4_di" bpmnElement="Lane_0zs17r4" isHorizontal="true">
+        <dc:Bounds x="145" y="35" width="1595" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_1r817pz_di" bpmnElement="Lane_1r817pz" isHorizontal="true">
+        <dc:Bounds x="145" y="155" width="1595" height="390" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0eo2j1n_di" bpmnElement="Lane_0eo2j1n" isHorizontal="true">
+        <dc:Bounds x="145" y="1320" width="1595" height="230" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_01pn2st_di" bpmnElement="Lane_01pn2st" isHorizontal="true">
+        <dc:Bounds x="145" y="1000" width="1595" height="320" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0ohzdf1_di" bpmnElement="Lane_0ohzdf1" isHorizontal="true">
+        <dc:Bounds x="145" y="880" width="1595" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0g6ac28_di" bpmnElement="Lane_0g6ac28" isHorizontal="true">
+        <dc:Bounds x="145" y="665" width="1595" height="215" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_0a0nvfy_di" bpmnElement="Lane_0a0nvfy" isHorizontal="true">
+        <dc:Bounds x="145" y="545" width="1595" height="120" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_0p3ty3v_di" bpmnElement="SequenceFlow_0p3ty3v">
+        <di:waypoint x="1025" y="1160" />
+        <di:waypoint x="928" y="1160" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="962" y="1142" width="29" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_10sd64k_di" bpmnElement="SequenceFlow_10sd64k">
+        <di:waypoint x="1050" y="1185" />
+        <di:waypoint x="1050" y="1245" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1060" y="1212" width="11" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0lnunvj_di" bpmnElement="SequenceFlow_0lnunvj">
+        <di:waypoint x="1355" y="1490" />
+        <di:waypoint x="1492" y="1490" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1x5f8kk_di" bpmnElement="SequenceFlow_1x5f8kk">
+        <di:waypoint x="1640" y="1380" />
+        <di:waypoint x="1672" y="1380" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0zlaube_di" bpmnElement="SequenceFlow_0zlaube">
+        <di:waypoint x="1500" y="1380" />
+        <di:waypoint x="1540" y="1380" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0f5an5p_di" bpmnElement="SequenceFlow_0f5an5p">
+        <di:waypoint x="1330" y="1405" />
+        <di:waypoint x="1330" y="1465" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1331" y="1432" width="29" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0aour4i_di" bpmnElement="SequenceFlow_0aour4i">
+        <di:waypoint x="1355" y="1380" />
+        <di:waypoint x="1400" y="1380" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1364" y="1362" width="11" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1pxyf8w_di" bpmnElement="SequenceFlow_1pxyf8w">
+        <di:waypoint x="1280" y="1380" />
+        <di:waypoint x="1305" y="1380" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1bxfg6k_di" bpmnElement="SequenceFlow_1bxfg6k">
+        <di:waypoint x="1150" y="1380" />
+        <di:waypoint x="1180" y="1380" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1s43vr4_di" bpmnElement="SequenceFlow_1s43vr4">
+        <di:waypoint x="990" y="1405" />
+        <di:waypoint x="990" y="1490" />
+        <di:waypoint x="1305" y="1490" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="991" y="1445" width="29" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1jahgwe_di" bpmnElement="SequenceFlow_1jahgwe">
+        <di:waypoint x="1015" y="1380" />
+        <di:waypoint x="1050" y="1380" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1026" y="1362" width="11" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1hdurzh_di" bpmnElement="SequenceFlow_1hdurzh">
+        <di:waypoint x="940" y="1380" />
+        <di:waypoint x="965" y="1380" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0b4i7od_di" bpmnElement="SequenceFlow_0b4i7od">
+        <di:waypoint x="805" y="1380" />
+        <di:waypoint x="840" y="1380" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0qlc0pa_di" bpmnElement="SequenceFlow_0qlc0pa">
+        <di:waypoint x="1025" y="1270" />
+        <di:waypoint x="780" y="1270" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0vl26t2_di" bpmnElement="SequenceFlow_0vl26t2">
+        <di:waypoint x="1050" y="1110" />
+        <di:waypoint x="1050" y="1135" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_17ptty3_di" bpmnElement="SequenceFlow_17ptty3">
+        <di:waypoint x="1050" y="980" />
+        <di:waypoint x="1050" y="1030" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_10as5s5_di" bpmnElement="SequenceFlow_10as5s5">
+        <di:waypoint x="1150" y="940" />
+        <di:waypoint x="1100" y="940" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1116" y="923" width="11" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0jsqv86_di" bpmnElement="SequenceFlow_0jsqv86">
+        <di:waypoint x="1235" y="940" />
+        <di:waypoint x="1200" y="940" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_03i3esk_di" bpmnElement="SequenceFlow_03i3esk">
+        <di:waypoint x="475" y="135" />
+        <di:waypoint x="475" y="305" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1br2ji4_di" bpmnElement="SequenceFlow_1br2ji4">
+        <di:waypoint x="253" y="95" />
+        <di:waypoint x="295" y="95" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0t21xf4_di" bpmnElement="SequenceFlow_0t21xf4">
+        <di:waypoint x="395" y="95" />
+        <di:waypoint x="425" y="95" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_14ae938_di" bpmnElement="SequenceFlow_14ae938">
+        <di:waypoint x="525" y="345" />
+        <di:waypoint x="560" y="345" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0trn9rr_di" bpmnElement="SequenceFlow_0trn9rr">
+        <di:waypoint x="848" y="345" />
+        <di:waypoint x="875" y="345" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0a6qx07_di" bpmnElement="SequenceFlow_0a6qx07">
+        <di:waypoint x="585" y="320" />
+        <di:waypoint x="585" y="215" />
+        <di:waypoint x="655" y="215" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0m52i5k_di" bpmnElement="SequenceFlow_0m52i5k">
+        <di:waypoint x="755" y="215" />
+        <di:waypoint x="823" y="215" />
+        <di:waypoint x="823" y="320" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1h69iq0_di" bpmnElement="SequenceFlow_1h69iq0">
+        <di:waypoint x="585" y="320" />
+        <di:waypoint x="585" y="305" />
+        <di:waypoint x="655" y="305" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1c9swg5_di" bpmnElement="SequenceFlow_1c9swg5">
+        <di:waypoint x="585" y="370" />
+        <di:waypoint x="585" y="395" />
+        <di:waypoint x="655" y="395" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0af8ip7_di" bpmnElement="SequenceFlow_0af8ip7">
+        <di:waypoint x="585" y="370" />
+        <di:waypoint x="585" y="485" />
+        <di:waypoint x="655" y="485" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0244nk4_di" bpmnElement="SequenceFlow_0244nk4">
+        <di:waypoint x="755" y="305" />
+        <di:waypoint x="823" y="305" />
+        <di:waypoint x="823" y="320" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_03m7fql_di" bpmnElement="SequenceFlow_03m7fql">
+        <di:waypoint x="755" y="395" />
+        <di:waypoint x="823" y="395" />
+        <di:waypoint x="823" y="370" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0sz841a_di" bpmnElement="SequenceFlow_0sz841a">
+        <di:waypoint x="755" y="485" />
+        <di:waypoint x="823" y="485" />
+        <di:waypoint x="823" y="370" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1iohxuv_di" bpmnElement="SequenceFlow_1iohxuv">
+        <di:waypoint x="975" y="345" />
+        <di:waypoint x="1000" y="345" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1sceczi_di" bpmnElement="SequenceFlow_1sceczi">
+        <di:waypoint x="1050" y="345" />
+        <di:waypoint x="1100" y="345" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0e1flu5_di" bpmnElement="SequenceFlow_0e1flu5">
+        <di:waypoint x="585" y="370" />
+        <di:waypoint x="585" y="605" />
+        <di:waypoint x="655" y="605" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0rioj8v_di" bpmnElement="SequenceFlow_0rioj8v">
+        <di:waypoint x="755" y="605" />
+        <di:waypoint x="875" y="605" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0auo21x_di" bpmnElement="SequenceFlow_0auo21x">
+        <di:waypoint x="975" y="605" />
+        <di:waypoint x="1025" y="605" />
+        <di:waypoint x="1025" y="370" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_13jgesr_di" bpmnElement="SequenceFlow_13jgesr">
+        <di:waypoint x="1125" y="370" />
+        <di:waypoint x="1125" y="685" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1512kvu_di" bpmnElement="SequenceFlow_1512kvu">
+        <di:waypoint x="1150" y="345" />
+        <di:waypoint x="1285" y="345" />
+        <di:waypoint x="1285" y="900" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1ckvjsv_di" bpmnElement="SequenceFlow_1ckvjsv">
+        <di:waypoint x="1075" y="725" />
+        <di:waypoint x="1040" y="725" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0qwq17n_di" bpmnElement="SequenceFlow_0qwq17n">
+        <di:waypoint x="990" y="725" />
+        <di:waypoint x="805" y="725" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="895" y="707" width="11" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0zsimv1_di" bpmnElement="SequenceFlow_0zsimv1">
+        <di:waypoint x="755" y="860" />
+        <di:waypoint x="755" y="1245" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1vsajiu_di" bpmnElement="SequenceFlow_1vsajiu">
+        <di:waypoint x="1015" y="750" />
+        <di:waypoint x="1015" y="835" />
+        <di:waypoint x="780" y="835" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1017" y="792" width="29" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0q9bqzl_di" bpmnElement="SequenceFlow_0q9bqzl">
+        <di:waypoint x="755" y="765" />
+        <di:waypoint x="755" y="810" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1yfoq4x_di" bpmnElement="SequenceFlow_1yfoq4x">
+        <di:waypoint x="755" y="1295" />
+        <di:waypoint x="755" y="1340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_01ndc2f_di" bpmnElement="SequenceFlow_01ndc2f">
+        <di:waypoint x="1175" y="965" />
+        <di:waypoint x="1175" y="1270" />
+        <di:waypoint x="1075" y="1270" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1176" y="1118" width="29" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="StartEvent_0ch0tsy_di" bpmnElement="StartEvent_0ch0tsy">
+        <dc:Bounds x="217" y="77" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="192" y="120" width="87" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ScriptTask_0x1sqz2_di" bpmnElement="Task_1ykedhi">
+        <dc:Bounds x="295" y="55" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0tty8ud_di" bpmnElement="Task_1bhwna7">
+        <dc:Bounds x="425" y="55" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ScriptTask_01guazy_di" bpmnElement="Task_0ppdlq8">
+        <dc:Bounds x="425" y="305" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BusinessRuleTask_0xhgeri_di" bpmnElement="Task_01nk6ar">
+        <dc:Bounds x="655" y="175" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ParallelGateway_00s0gqi_di" bpmnElement="ExclusiveGateway_1xmjj30">
+        <dc:Bounds x="560" y="320" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BusinessRuleTask_1x0anjv_di" bpmnElement="Task_1x0uxck">
+        <dc:Bounds x="655" y="265" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ParallelGateway_1io6ynl_di" bpmnElement="ExclusiveGateway_1gneb34">
+        <dc:Bounds x="798" y="320" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BusinessRuleTask_0m7osi6_di" bpmnElement="Task_0hv8ov4">
+        <dc:Bounds x="655" y="355" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BusinessRuleTask_1x952ix_di" bpmnElement="Task_0w75rof">
+        <dc:Bounds x="655" y="445" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ScriptTask_02tru94_di" bpmnElement="Task_1vepd2v">
+        <dc:Bounds x="875" y="305" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ParallelGateway_10wk3ry_di" bpmnElement="ExclusiveGateway_0nfdzba">
+        <dc:Bounds x="1000" y="320" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BusinessRuleTask_1bv2lg5_di" bpmnElement="Task_1garqyq">
+        <dc:Bounds x="655" y="565" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ScriptTask_1p2q7iy_di" bpmnElement="Task_0br9fxp">
+        <dc:Bounds x="875" y="565" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_01o1fv5_di" bpmnElement="Task_0u6qfyc">
+        <dc:Bounds x="1075" y="685" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_13pvz98_di" bpmnElement="ExclusiveGateway_13pvz98"
+        isMarkerVisible="true">
+        <dc:Bounds x="990" y="700" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="974" y="676" width="81" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_1000uk3_di" bpmnElement="ExclusiveGateway_1000uk3"
+        isMarkerVisible="true">
+        <dc:Bounds x="730" y="810" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_04hllm8_di" bpmnElement="ExclusiveGateway_04hllm8"
+        isMarkerVisible="true">
+        <dc:Bounds x="1150" y="915" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1134" y="891" width="81" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0v6d5hm_di" bpmnElement="Task_0m16wk9">
+        <dc:Bounds x="1235" y="900" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0rl8ape_di" bpmnElement="Task_0tj06ef">
+        <dc:Bounds x="705" y="685" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ScriptTask_19m97dr_di" bpmnElement="ScriptTask_19m97dr">
+        <dc:Bounds x="705" y="1340" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_1n02unq_di" bpmnElement="Task_0ojkxz6">
+        <dc:Bounds x="840" y="1340" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_0zbg0zm_di" bpmnElement="ExclusiveGateway_0zbg0zm"
+        isMarkerVisible="true">
+        <dc:Bounds x="965" y="1355" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="954" y="1331" width="71" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ScriptTask_0clz3kc_di" bpmnElement="Task_15pye22">
+        <dc:Bounds x="1050" y="1340" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_0bzw2uc_di" bpmnElement="Task_0zf04jt">
+        <dc:Bounds x="1180" y="1340" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_055qe8q_di" bpmnElement="ExclusiveGateway_055qe8q"
+        isMarkerVisible="true">
+        <dc:Bounds x="1305" y="1355" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1292" y="1326" width="75" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ScriptTask_19orvdc_di" bpmnElement="Task_1m8khb5">
+        <dc:Bounds x="1400" y="1340" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_1ci9oi6_di" bpmnElement="EndEvent_1ci9oi6">
+        <dc:Bounds x="1672" y="1362" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1658" y="1405" width="65" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_1w3xe3c_di" bpmnElement="Task_0udgayb">
+        <dc:Bounds x="1540" y="1340" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_162bc24_di" bpmnElement="EndEvent_1gfkdys">
+        <dc:Bounds x="1492" y="1472" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1478" y="1515" width="65" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_1unxd0a_di" bpmnElement="ExclusiveGateway_1unxd0a"
+        isMarkerVisible="true">
+        <dc:Bounds x="1305" y="1465" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ParallelGateway_02xf0r0_di" bpmnElement="ExclusiveGateway_02i6pdz">
+        <dc:Bounds x="730" y="1245" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_1eepjh0_di" bpmnElement="Task_09zyykt">
+        <dc:Bounds x="1000" y="900" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_1b187bk_di" bpmnElement="Task_1asithb">
+        <dc:Bounds x="1000" y="1030" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_0lelokl_di" bpmnElement="ExclusiveGateway_0lelokl"
+        isMarkerVisible="true">
+        <dc:Bounds x="1025" y="1245" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ExclusiveGateway_1ra4p9c_di" bpmnElement="ExclusiveGateway_1ra4p9c"
+        isMarkerVisible="true">
+        <dc:Bounds x="1025" y="1135" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1085" y="1153" width="52" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_0vklf0z_di" bpmnElement="EndEvent_0jnp6cm">
+        <dc:Bounds x="892" y="1142" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="868" y="1185" width="84" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ParallelGateway_06bj9ab_di" bpmnElement="ExclusiveGateway_0yyhilj">
+        <dc:Bounds x="1100" y="320" width="50" height="50" />
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn2:definitions>

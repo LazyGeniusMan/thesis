@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "id": "681de28a-accd-41d4-8a77-b6a07a168452",
+    "name": "Skripsi PKB - Initiation",
+    "description": "Initiation",
+    "title": "Initiation"
+  },
+  "views": [
+    {
+      "id": "NX_NlZ1io8P",
+      "type": "container",
+      "options": {
+        "color": "#000000",
+        "height": "auto",
+        "width": "auto"
+      },
+      "container": true,
+      "content": [
+        {
+          "id": "NX_b2NvbmBZ",
+          "type": "nx:task-form",
+          "options": {
+            "actionName": "initiation_action",
+            "actions": ["start"],
+            "color": "#000000",
+            "comment": true,
+            "commentBinding": "comment",
+            "commentLabel": "Comment",
+            "commentLayout": 0,
+            "commentName": "comment",
+            "commentPlaceholder": "Your comment",
+            "context": "nextflow_user_task"
+          },
+          "container": true
+        }
+      ]
+    }
+  ],
+  "context": {
+    "nextflow_user_task": {
+      "type": "next:task",
+      "hash": "d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f"
+    },
+    "requester": {
+      "type": "http:query",
+      "encoding": "utf-8",
+      "hash": "d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f",
+      "query": "data"
+    }
+  }
+}

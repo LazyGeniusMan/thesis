@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" id="definitions_1hf6bjy"
+    name="definitions" namespace="http://camunda.org/schema/1.0/dmn"
+    exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="11.0.1">
+    <decision id="decision_03d34n8" name="">
+        <decisionTable id="decisionTable_193x27e" hitPolicy="FIRST">
+            <input id="input1" label="Jenis Kendaraan">
+                <inputExpression id="inputExpression1" typeRef="string">
+                    <text>op_jenis</text>
+                </inputExpression>
+            </input>
+            <input id="InputClause_1z0biel" label="Golongan Kendaraan">
+                <inputExpression id="LiteralExpression_0ggwmx9" typeRef="string">
+                    <text>op_golongan</text>
+                </inputExpression>
+            </input>
+            <input id="InputClause_0n82gjy" label="Model Kendaraan">
+                <inputExpression id="LiteralExpression_1t2yawz" typeRef="string">
+                    <text>op_model</text>
+                </inputExpression>
+            </input>
+            <input id="InputClause_1xf4po4" label="Isi Silinder">
+                <inputExpression id="LiteralExpression_04eou6p" typeRef="integer">
+                    <text>op_isi_silinder</text>
+                </inputExpression>
+            </input>
+            <input id="InputClause_0j8kbh7" label="Warna TNKB">
+                <inputExpression id="LiteralExpression_1w5zu4t" typeRef="string">
+                    <text>op_warna_tnkb</text>
+                </inputExpression>
+            </input>
+            <input id="InputClause_06u8l9o" label="Jumlah Roda">
+                <inputExpression id="LiteralExpression_0ceq77u" typeRef="string">
+                    <text>op_jumlah_roda</text>
+                </inputExpression>
+            </input>
+            <output id="output1" label="SWDKLLJ" name="swdkllj_pokok" typeRef="integer" />
+            <rule id="DecisionRule_1g4yrb1">
+                <description>Sepeda motor di bawah 50 cc, mobil ambulans, mobil jenazah, dan mobil
+                    pemadam kebakaran</description>
+                <inputEntry id="UnaryTests_1m3ht0x">
+                    <text>"SEPEDA MOTOR"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0k25mxd">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_16htgol">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1j910b7">
+                    <text>&lt; 50</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_17ra2br">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0y2khs9">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1cajj04">
+                    <text>0</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1hme1pw">
+                <description>Sepeda motor di bawah 50 cc, mobil ambulans, mobil jenazah, dan mobil
+                    pemadam kebakaran</description>
+                <inputEntry id="UnaryTests_0ahdaji">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_12ahxm2">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0bt8hmy">
+                    <text>"MOBIL AMBULANS", "MOBIL JENAZAH", "MOBIL PEMADAM KEBARAKAN"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0uzcknh">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1ejmuwx">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_01jnghc">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0zn9pt4">
+                    <text>0</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0w26sd9">
+                <description>Mobil derek dan sejenisnya</description>
+                <inputEntry id="UnaryTests_1xvv8al">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_14i5wix">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_07u9dsv">
+                    <text>"MOBIL DEREK"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_120n5wt">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_11hwdzo">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1x1pjgs">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1jmfip7">
+                    <text>20000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1ontro8">
+                <description>Sepeda motor, sepeda kumbang dan scooter di atas 50 cc sampai 250 cc,
+                    dan kendaraan bermotor roda tiga</description>
+                <inputEntry id="UnaryTests_0ucr8no">
+                    <text>"SEPEDA MOTOR"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0uipa2b">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1ua1tgj">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1n8psy4">
+                    <text>[50..250]</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0b4mpiz">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0yg6t8q">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0guneqj">
+                    <text>32000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0yfg5pg">
+                <description>Sepeda motor, sepeda kumbang dan scooter di atas 50 cc sampai 250 cc,
+                    dan kendaraan bermotor roda tiga</description>
+                <inputEntry id="UnaryTests_0drlkxf">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0sm9z55">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1fcbae4">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0bxhbsq">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1pco79w">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0oi4kif">
+                    <text>3</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_16zdyj1">
+                    <text>32000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0i4kkh6">
+                <description>Sepeda motor di atas 250 cc</description>
+                <inputEntry id="UnaryTests_0pcwobv">
+                    <text>"SEPEDA MOTOR"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0pln4ea">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0lbjv7j">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1s9j9cx">
+                    <text>&gt; 250</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0fpn7bf">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_15hgcqo">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_06vd17t">
+                    <text>80000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0ssm0w0">
+                <description>Pick-up/mobil barang sampai dengan 2400 cc, sedan, jeep, dan mobil
+                    penumpang bukan Angkutan umum</description>
+                <inputEntry id="UnaryTests_1wqbazx">
+                    <text>"MOBIL BARANG"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0juh4zk">
+                    <text>"PICK UP"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0co0oq1">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_06a2n98">
+                    <text>&lt;= 2400</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1s4iisu">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_194dm4c">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_171ivh2">
+                    <text>140000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_13i8puj">
+                <description>Pick-up/mobil barang sampai dengan 2400 cc, sedan, jeep, dan mobil
+                    penumpang bukan Angkutan umum</description>
+                <inputEntry id="UnaryTests_1vydofv">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_10tmlb3">
+                    <text>"SEDAN", "JEEP"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_061d539">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1ncxq17">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0u7y959">
+                    <text>not("KUNING")</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_11ep7kg">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1d1vhoq">
+                    <text>140000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1df4dau">
+                <description>Mobil penumpang Angkutan umum sampai dengan 1600 cc</description>
+                <inputEntry id="UnaryTests_10y4mcu">
+                    <text>"MOBIL PENUMPANG"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1dw73ue">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0zkdkz7">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1kt6xaz">
+                    <text>&lt;= 1600</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1ho9q82">
+                    <text>"KUNING"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1oz1jq0">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0y4cg48">
+                    <text>70000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1mkccx5">
+                <description>Bus dan mikro bus bukan Angkutan umum </description>
+                <inputEntry id="UnaryTests_04tlxff">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_04yk59i">
+                    <text>"BUS", "MICROBUS"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0uz4gli">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1ahjupp">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1tzfh14">
+                    <text>not("KUNING")</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1i3pjif">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_18kbg18">
+                    <text>150000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_07g0r95">
+                <description>Bus dan mikro bus Angkutan umum, serta mobil penumpang Angkutan umum
+                    lainnya diatas 1600 cc</description>
+                <inputEntry id="UnaryTests_1t8cx6d">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_105l0z2">
+                    <text>"BUS", "MICROBUS"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_16w2gzo">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_02eqsv7">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_14jgcth">
+                    <text>"KUNING"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0yqt9xa">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_06ymnh7">
+                    <text>87000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1odov8u">
+                <description>Bus dan mikro bus Angkutan umum, serta mobil penumpang Angkutan umum
+                    lainnya diatas 1600 cc</description>
+                <inputEntry id="UnaryTests_0d1gwek">
+                    <text>"MOBIL PENUMPANG"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0533d1k">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1c5ajkd">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0jqvcgj">
+                    <text>&gt; 1600</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0fn7qah">
+                    <text>"KUNING"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0x5cet9">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1dmint4">
+                    <text>87000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1jcmu2j">
+                <description>Truk, mobil tangki, mobil gandengan, mobil barang di atas 2400 cc, truk
+                    container, dan sejenisnya</description>
+                <inputEntry id="UnaryTests_1gp4ln3">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_020h5vu">
+                    <text>"LIGHT TRUCK", "TRUCK"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1ngt6uo">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0lm0w8b">
+                    <text>&gt; 2400</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0z3tzu1">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0zf03z8">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1sv83e3">
+                    <text>160000</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+</definitions>

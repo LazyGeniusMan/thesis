@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" id="definitions_1hf6bjy"
+    name="definitions" namespace="http://camunda.org/schema/1.0/dmn"
+    exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="11.0.1">
+    <decision id="decision_03d34n8" name="">
+        <decisionTable id="decisionTable_193x27e">
+            <input id="input1" label="Merk">
+                <inputExpression id="inputExpression1" typeRef="string">
+                    <text>op_merk</text>
+                </inputExpression>
+            </input>
+            <input id="InputClause_1w0wutr" label="Tipe">
+                <inputExpression id="LiteralExpression_0vmdf3z" typeRef="string">
+                    <text>op_tipe</text>
+                </inputExpression>
+            </input>
+            <input id="InputClause_1fgyhgo" label="Tahun">
+                <inputExpression id="LiteralExpression_0jmvepz" typeRef="integer">
+                    <text>op_tahun_pembuatan</text>
+                </inputExpression>
+            </input>
+            <output id="output1" label="NJKB" name="op_njkb" typeRef="integer" />
+            <rule id="DecisionRule_0vmyi4u">
+                <description>Sampel Sedan</description>
+                <inputEntry id="UnaryTests_0ourv65">
+                    <text>"ASTON MARTIN"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0v62tgy">
+                    <text>"DB 11"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1t80s6s">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0br2l6g">
+                    <text>7399000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1wt5r95">
+                <description>Sampel Sedan</description>
+                <inputEntry id="UnaryTests_0scc1ca">
+                    <text>"ASTON MARTIN"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1e383gq">
+                    <text>"DB 11 AT"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0zc0xv0">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1uldm8h">
+                    <text>5147000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0rkyma4">
+                <description>Sampel Sedan</description>
+                <inputEntry id="UnaryTests_0lg7uqv">
+                    <text>"ASTON MARTIN"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0tmys68">
+                    <text>"DB11 V8 AT"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_16c1832">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1c1xs2v">
+                    <text>5073000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0t4bq71">
+                <description>Sampel Jeep</description>
+                <inputEntry id="UnaryTests_19c5c6c">
+                    <text>"JEEP"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0ndiuji">
+                    <text>"CHEROKEE LIMITED 2.0T A/T"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1tfppvb">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1njdh3x">
+                    <text>1205000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0gdy17s">
+                <description>Sampel Jeep</description>
+                <inputEntry id="UnaryTests_1l2cb42">
+                    <text>"JEEP"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0qintgj">
+                    <text>"CHEROKEE TRAILHAWK 2.0T A/T"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1txsoyp">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_05mjpml">
+                    <text>1284000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1eu9qtf">
+                <description>Sampel Jeep</description>
+                <inputEntry id="UnaryTests_0r1b7uo">
+                    <text>"JEEP"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1tz59nw">
+                    <text>"GLADIATOR 3.6 AT"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_01yojhw">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_03bpcc0">
+                    <text>1000000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0a3ysrv">
+                <description>Sampel Minibus</description>
+                <inputEntry id="UnaryTests_032bps3">
+                    <text>"DAIHATSU"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_162en18">
+                    <text>"A250RS-GBVVJ 1.0 R A/T"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0pa5qie">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1s8xwiv">
+                    <text>176400000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1l8oi3h">
+                <description>Sampel Minibus</description>
+                <inputEntry id="UnaryTests_1j0rh3w">
+                    <text>"DAIHATSU"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1ozf5us">
+                    <text>"A250RS-GBVVJ 1.0 R CVT"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_00ex83n">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0v0fcbv">
+                    <text>176400000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1a4jhu1">
+                <description>Sampel Minibus</description>
+                <inputEntry id="UnaryTests_1wx1hx0">
+                    <text>"DAIHATSU"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_066em4y">
+                    <text>"A250RS-GBVVJ 1.0 R CVT ASA"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_16d048g">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_071nl2n">
+                    <text>181650000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0urqul0">
+                <description>Sampel Microbus</description>
+                <inputEntry id="UnaryTests_0ikfula">
+                    <text>"TOYOTA"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_18cf17q">
+                    <text>"DYNA 110 ST BUS 4X2 M/T (WU302R-TRMLHD8)"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_15nwu7d">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1calvtf">
+                    <text>229000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0wb92tx">
+                <description>Sampel Microbus</description>
+                <inputEntry id="UnaryTests_1tub3eo">
+                    <text>"TOYOTA"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1ad0ye4">
+                    <text>"DYNA 110 ST BUS LONG 4X2 M/T (WU342R-TRMLHD8)"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0edi16l">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0vplr98">
+                    <text>238000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1dja1hi">
+                <description>Sampel Microbus</description>
+                <inputEntry id="UnaryTests_14z9xqv">
+                    <text>"TOYOTA"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_08n1o3j">
+                    <text>"DYNA 130 XT BUS LONG 4X2 M/T (WU352R-TKMRJD8)"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1klfj37">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0i68yji">
+                    <text>269000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_09tj8xw">
+                <description>Sampel Bus</description>
+                <inputEntry id="UnaryTests_0hkvgbk">
+                    <text>"SCANIA"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_13exo5x">
+                    <text>"K250IB-4X2"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1wgwke3">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0vbocmm">
+                    <text>681000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0et87bw">
+                <description>Sampel Bus</description>
+                <inputEntry id="UnaryTests_1kl7zpt">
+                    <text>"SCANIA"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1wwqqqr">
+                    <text>"K250UB-4X2"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1o699u8">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1ww4p95">
+                    <text>779000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0ayp5hx">
+                <description>Sampel Bus</description>
+                <inputEntry id="UnaryTests_0gs6lz3">
+                    <text>"SCANIA"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_02cptia">
+                    <text>"K310IB-6X2"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1bgia2b">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0ya3dbi">
+                    <text>1239000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0bg9pfy">
+                <description>Sampel Pick Up</description>
+                <inputEntry id="UnaryTests_0fg88oc">
+                    <text>"ISUZU"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1pb7cjo">
+                    <text>"PHR 54 C AB"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1y1b7ul">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0om7kxb">
+                    <text>107000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_16s4anj">
+                <description>Sampel Pick Up</description>
+                <inputEntry id="UnaryTests_0os73ei">
+                    <text>"ISUZU"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0fbd53i">
+                    <text>"PHR 54 C AB B"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_00byw9g">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0905f2x">
+                    <text>108000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_06ol8k6">
+                <description>Sampel Pick Up</description>
+                <inputEntry id="UnaryTests_1a2p5hz">
+                    <text>"ISUZU"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1ey8e8w">
+                    <text>"PHR 54 C AR"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1joekdd">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_11gmrfw">
+                    <text>109000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1v289og">
+                <description>Sampel Blind Van</description>
+                <inputEntry id="UnaryTests_1h4vsd2">
+                    <text>"DFSK"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_16bv05p">
+                    <text>"DXK5026XXYF (4X2) M/T"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_00r47cl">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_12v41ta">
+                    <text>84000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0cibw8k">
+                <description>Sampel Blind Van</description>
+                <inputEntry id="UnaryTests_1g2msdt">
+                    <text>"DFSK"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1oeupnl">
+                    <text>"DXK5030XXYC4BEV9"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1659mi8">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0tdzosi">
+                    <text>177000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1rb51s9">
+                <description>Sampel Blind Van</description>
+                <inputEntry id="UnaryTests_1qwhxbn">
+                    <text>"DFSK"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0ao6ctf">
+                    <text>"DXK5030XXYC9BEV"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0ejaxx8">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_03612ni">
+                    <text>177000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0k2zggr">
+                <description>Sampel Light Truck</description>
+                <inputEntry id="UnaryTests_0ys3ash">
+                    <text>"HINO"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1vovra5">
+                    <text>"110 SD (WU302R - HKMLHD3)"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0it6i2x">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0xdrer0">
+                    <text>149000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0f39krr">
+                <description>Sampel Light Truck</description>
+                <inputEntry id="UnaryTests_02grqi2">
+                    <text>"HINO"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0f2kfbd">
+                    <text>"110 SDL (WU342R - HKMLHD8)"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0nwjlvu">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1p3h0zd">
+                    <text>154000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0avu0t0">
+                <description>Sampel Light Truck</description>
+                <inputEntry id="UnaryTests_1du18wo">
+                    <text>"HINO"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0ntises">
+                    <text>"130 HD (WU342R - HKMTJD3)"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_103057s">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1vrq6mp">
+                    <text>234000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1jwk1dh">
+                <description>Sampel Truck</description>
+                <inputEntry id="UnaryTests_0y0wg3d">
+                    <text>"UD TRUCKS"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0wkw6lk">
+                    <text>"CDE 250 6X2R WB4300MM"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1ed70yl">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1xmhnq2">
+                    <text>276000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1uvof0h">
+                <description>Sampel Truck</description>
+                <inputEntry id="UnaryTests_1m3n849">
+                    <text>"UD TRUCKS"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1bd4lgj">
+                    <text>"CDE 250 6X2R WB4300MM ABS M/T"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1tg2jz9">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0sp1sap">
+                    <text>517000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1k1qi27">
+                <description>Sampel Truck</description>
+                <inputEntry id="UnaryTests_1gm5vjq">
+                    <text>"UD TRUCKS"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1kkgqyi">
+                    <text>"CDE 250 6X2R WB4300MM BL"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1rkm7he">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0fg71c2">
+                    <text>277000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1485f0j">
+                <description>Sampel Sepeda Motor Roda 2</description>
+                <inputEntry id="UnaryTests_08xyb2b">
+                    <text>"HONDA"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1sh2um1">
+                    <text>"A1F02N36M1 A/T"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1au3tub">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1x3qkt9">
+                    <text>15400000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_129iobz">
+                <description>Sampel Sepeda Motor Roda 2</description>
+                <inputEntry id="UnaryTests_1ycfdmh">
+                    <text>"HONDA"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0qmrf5y">
+                    <text>"A1F02N37M1 A/T"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1h4hs8m">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0n6vr7w">
+                    <text>16000000</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1qrqrma">
+                <description>Sampel Sepeda Motor Roda 2</description>
+                <inputEntry id="UnaryTests_0uoh1gi">
+                    <text>"HONDA"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0olu5zg">
+                    <text>"A5C02R37M2 M/T"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0b23kr5">
+                    <text>2021</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0zco463">
+                    <text>21900000</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+</definitions>

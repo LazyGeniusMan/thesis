@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" id="definitions_1hf6bjy"
+    name="definitions" namespace="http://camunda.org/schema/1.0/dmn"
+    exporter="dmn-js (https://demo.bpmn.io/dmn)" exporterVersion="11.0.1">
+    <decision id="decision_03d34n8" name="">
+        <decisionTable id="decisionTable_193x27e">
+            <input id="input1" label="Kategori WP">
+                <inputExpression id="inputExpression1" typeRef="string">
+                    <text>wp_kategori</text>
+                </inputExpression>
+            </input>
+            <input id="InputClause_0gqiqs8" label="Urutan Kepemilikan">
+                <inputExpression id="LiteralExpression_1figkgl" typeRef="integer">
+                    <text>op_urutan_kepemilikan</text>
+                </inputExpression>
+            </input>
+            <output id="output1" label="Tarif PKB" name="op_tarif" typeRef="double" />
+            <rule id="DecisionRule_0zf1qzd">
+                <description>Kendaraan Pribadi Kepemilikan Ke-1</description>
+                <inputEntry id="UnaryTests_0esxrhc">
+                    <text>"PRIBADI"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1h3g7ra">
+                    <text>1</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0zuhedb">
+                    <text>0.012</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1nbidys">
+                <description>Kendaraan Pribadi Kepemilikan Ke-2</description>
+                <inputEntry id="UnaryTests_1yjs2mn">
+                    <text>"PRIBADI"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_07hfyif">
+                    <text>2</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1ltub8u">
+                    <text>0.024</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_09ellv0">
+                <description>Kendaraan Pribadi Kepemilikan Ke-3</description>
+                <inputEntry id="UnaryTests_0q4fl4z">
+                    <text>"PRIBADI"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1xwwpds">
+                    <text>3</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1hf658s">
+                    <text>0.036</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0uot0kk">
+                <description>Kendaraan Pribadi Kepemilikan Ke-4</description>
+                <inputEntry id="UnaryTests_1wv13pg">
+                    <text>"PRIBADI"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_07uaaw3">
+                    <text>4</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_06kzgq6">
+                    <text>0.048</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0r96iq5">
+                <description>Kendaraan Pribadi Kepemilikan Ke-5 dst</description>
+                <inputEntry id="UnaryTests_08cizr4">
+                    <text>"PRIBADI"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1bzz82d">
+                    <text>&gt;= 5</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1057xja">
+                    <text>0.060</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1o8htbs">
+                <description>kendaraan umum, angkutan karyawan, angkutan
+                    sekolah, ambulans, pemadam kebakaran, sosial keagamaan, lembaga sosial dan
+                    keagamaan, dan pemerintah </description>
+                <inputEntry id="UnaryTests_1cbj5jd">
+                    <text>not("PRIBADI")</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1m9a1yh">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_163ktp5">
+                    <text>0.005</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+</definitions>

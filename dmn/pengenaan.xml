@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
+    xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="definitions_1hf6bjy" name="definitions"
+    namespace="http://camunda.org/schema/1.0/dmn" exporter="dmn-js (https://demo.bpmn.io/dmn)"
+    exporterVersion="11.0.1">
+    <decision id="decision_03d34n8" name="">
+        <decisionTable id="decisionTable_193x27e" hitPolicy="FIRST">
+            <input id="input1" label="Warna TNKB" biodi:width="252">
+                <inputExpression id="inputExpression1" typeRef="string">
+                    <text>op_warna_tnkb</text>
+                </inputExpression>
+            </input>
+            <input id="InputClause_1w5kz0c" label="Bahan Bakar">
+                <inputExpression id="LiteralExpression_0w9pqnc" typeRef="string">
+                    <text>op_bahan_bakar</text>
+                </inputExpression>
+            </input>
+            <input id="InputClause_1ymrxy3" label="Jenis Kendaraan">
+                <inputExpression id="LiteralExpression_1iyz5ab" typeRef="string">
+                    <text>op_jenis</text>
+                </inputExpression>
+            </input>
+            <input id="InputClause_0jajl4c" label="Model Kendaraan">
+                <inputExpression id="LiteralExpression_0yzv5cw" typeRef="string">
+                    <text>op_model</text>
+                </inputExpression>
+            </input>
+            <output id="output1" label="Pengenaan" name="op_pengenaan" typeRef="double" />
+            <rule id="DecisionRule_0gbhtkv">
+                <description>Angkutan umum untuk orang</description>
+                <inputEntry id="UnaryTests_1cpmcr1">
+                    <text>"KUNING"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1o6m39f">
+                    <text>not("LISTRIK")</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1i93wja">
+                    <text>"MOBIL PENUMPANG","MOBIL BUS"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_17nbl8j">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0zwo7e3">
+                    <text>0.3</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1hwfwtq">
+                <description>Angkutan umum untuk barang</description>
+                <inputEntry id="UnaryTests_0px1c64">
+                    <text>"KUNING"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0lsq0rx">
+                    <text>not("LISTRIK")</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1g3kxem">
+                    <text>"MOBIL BARANG"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1r39jjq">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_09eb4wa">
+                    <text>0.6</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1nympd9">
+                <description>Kendaraan Bermotor Listrik berbasis baterai
+                    untuk orang atau barang</description>
+                <inputEntry id="UnaryTests_1amfwbp">
+                    <text>"HITAM", "KUNING", "MERAH"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1w7ub27">
+                    <text>"LISTRIK"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_00psaer">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1whvrcx">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1iz05r1">
+                    <text>0.1</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_09fq7nr">
+                <description>Kendaraan Bermotor Listrik umum berbasis baterai
+                    untuk orang</description>
+                <inputEntry id="UnaryTests_0pw2axm">
+                    <text>"KUNING"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1ctbsza">
+                    <text>"LISTRIK"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0l1xhxe">
+                    <text>"MOBIL PENUMPANG","MOBIL BUS"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1l4oeq9">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0cwh515">
+                    <text>0.1</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0s27nnu">
+                <description>Kendaraan Bermotor Listrik umum berbasis baterai
+                    untuk barang</description>
+                <inputEntry id="UnaryTests_1ujdous">
+                    <text>"KUNING"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1uaa5pj">
+                    <text>"LISTRIK"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1xqll5b">
+                    <text>"MOBIL BARANG"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1qq964l">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1g0b73t">
+                    <text>0.1</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_1hrlpqb">
+                <description>Ambulans, pemadam kebakaran, dan pelayanan
+                    kebersihan milik Pemerintah, TNI, Polri</description>
+                <inputEntry id="UnaryTests_0w1p8jt">
+                    <text>"MERAH"</text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1a1e9lx">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_1423vfa">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0i3uhc4">
+                    <text>"MOBIL AMBULANS","MOBIL PEMADAM KEBAKARAN", "MOBIL PELAYANAN KEBERSIHAN"</text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_1djywa7">
+                    <text>0</text>
+                </outputEntry>
+            </rule>
+            <rule id="DecisionRule_0plv60p">
+                <description>Selain diatas</description>
+                <inputEntry id="UnaryTests_1gni5oy">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0mewrc9">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0cbyfpw">
+                    <text></text>
+                </inputEntry>
+                <inputEntry id="UnaryTests_0sgxupj">
+                    <text></text>
+                </inputEntry>
+                <outputEntry id="LiteralExpression_0jl3twr">
+                    <text>1</text>
+                </outputEntry>
+            </rule>
+        </decisionTable>
+    </decision>
+</definitions>

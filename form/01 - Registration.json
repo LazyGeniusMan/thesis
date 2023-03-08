@@ -1,0 +1,631 @@
+{
+  "meta": {
+    "id": "b2851c58-b0b6-41da-87c4-05e8dcc9d46b",
+    "name": "Skripsi PKB - Pendaftaran ERI",
+    "description": "Form Pendaftaran ERI",
+    "title": "Pendaftaran ERI"
+  },
+  "views": [
+    {
+      "id": "NX_hO8qOAzl",
+      "type": "container",
+      "options": {
+        "color": "#000000",
+        "height": "auto",
+        "width": "auto"
+      },
+      "container": true,
+      "content": [
+        {
+          "id": "NX_SYZF2vAG",
+          "type": "nx:task-form",
+          "options": {
+            "actionName": "pendaftaran_action",
+            "actions": ["submit"],
+            "color": "#000000",
+            "comment": true,
+            "commentBinding": "comment",
+            "commentLabel": "Comment",
+            "commentLayout": 0,
+            "commentName": "comment",
+            "commentPlaceholder": "Your comment",
+            "context": "nextflow_user_task"
+          },
+          "container": true,
+          "content": [
+            {
+              "id": "NX_J1gvSy82",
+              "type": "section",
+              "options": {
+                "color": "#000000",
+                "height": "auto",
+                "title": "Data Pendaftaran",
+                "width": "auto"
+              },
+              "container": true,
+              "content": [
+                {
+                  "id": "NX_OK6Sq5b2",
+                  "type": "date",
+                  "name": "pendaftaran_tgl",
+                  "options": {
+                    "binding": "variables.pendaftaran_tgl",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "defaultValue": "",
+                    "label": "Tanggal Pendaftaran",
+                    "layout": 0,
+                    "placeholder": "",
+                    "readonly": false
+                  }
+                },
+                {
+                  "id": "NX_BNuiGOJi",
+                  "type": "select",
+                  "name": "pendaftaran_jenis",
+                  "options": {
+                    "options": "pendaftaran_jenis",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "contextBinding": "variables.pendaftaran_jenis",
+                    "label": "Jenis Pendaftaran",
+                    "layout": 0,
+                    "required": true
+                  }
+                }
+              ]
+            },
+            {
+              "id": "NX_JPiCoY2g",
+              "type": "section",
+              "options": {
+                "color": "#000000",
+                "height": "auto",
+                "title": "Data Wajib Pajak",
+                "width": "auto"
+              },
+              "container": true,
+              "content": [
+                {
+                  "id": "NX_58P8mhmF",
+                  "type": "text",
+                  "name": "wp_nik_nib",
+                  "options": {
+                    "binding": "variables.wp_nik_nib",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "label": "NIK/NIB",
+                    "layout": 0,
+                    "required": true
+                  }
+                },
+                {
+                  "id": "NX_y2KKoYbS",
+                  "type": "text",
+                  "name": "wp_nama",
+                  "options": {
+                    "binding": "variables.wp_nama",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "label": "Nama",
+                    "required": true
+                  }
+                },
+                {
+                  "id": "NX_iZCP5moF",
+                  "type": "textArea",
+                  "name": "wp_alamat",
+                  "options": {
+                    "binding": "variables.wp_alamat",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "label": "Alamat",
+                    "layout": 0,
+                    "required": true
+                  }
+                },
+                {
+                  "id": "NX_go1vlAuv",
+                  "type": "select",
+                  "name": "wp_kategori",
+                  "options": {
+                    "options": "wp_kategori",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "contextBinding": "variables.wp_kategori",
+                    "label": "Kategori",
+                    "layout": 0,
+                    "required": true
+                  }
+                }
+              ]
+            },
+            {
+              "id": "NX_NvuzgU6l",
+              "type": "section",
+              "options": {
+                "color": "#000000",
+                "height": "auto",
+                "title": "Data Kendaraan",
+                "width": "auto"
+              },
+              "container": true,
+              "content": [
+                {
+                  "id": "NX_GmyNComJ",
+                  "type": "text",
+                  "name": "op_no_reg",
+                  "options": {
+                    "binding": "variables.op_no_reg",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "label": "Nomor Registrasi",
+                    "layout": 0,
+                    "required": true
+                  }
+                },
+                {
+                  "id": "NX_ZOuJ8BYZ",
+                  "type": "text",
+                  "name": "op_urutan_kepemilikan",
+                  "options": {
+                    "binding": "variables.op_urutan_kepemilikan",
+                    "color": "#000000",
+                    "context": "nextflow_user_task",
+                    "label": "Urutan Kepemilikan",
+                    "layout": 0,
+                    "required": true
+                  }
+                },
+                {
+                  "id": "NX_5PqO6SFG",
+                  "type": "container",
+                  "options": {
+                    "color": "#000000",
+                    "column": "2",
+                    "height": "auto",
+                    "width": "auto"
+                  },
+                  "container": true,
+                  "content": [
+                    {
+                      "id": "NX_hl2GoKmb",
+                      "type": "text",
+                      "name": "op_merk",
+                      "options": {
+                        "binding": "variables.op_merk",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Merk",
+                        "layout": 0,
+                        "required": true
+                      }
+                    },
+                    {
+                      "id": "NX_OJomBoFz",
+                      "type": "text",
+                      "name": "op_warna",
+                      "options": {
+                        "binding": "variables.op_warna",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Warna",
+                        "layout": 0,
+                        "required": true
+                      }
+                    },
+                    {
+                      "id": "NX_11TvUlTF",
+                      "type": "text",
+                      "name": "op_tipe",
+                      "options": {
+                        "binding": "variables.op_tipe",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Tipe",
+                        "layout": 0,
+                        "required": true
+                      }
+                    },
+                    {
+                      "id": "NX_JuzlYOlJ",
+                      "type": "select",
+                      "name": "op_bahan_bakar",
+                      "options": {
+                        "options": "op_bahan_bakar",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "contextBinding": "variables.op_bahan_bakar",
+                        "label": "Bahan Bakar",
+                        "layout": 0,
+                        "required": true
+                      }
+                    },
+                    {
+                      "id": "NX_A8NzoTY8",
+                      "type": "select",
+                      "name": "op_jenis",
+                      "options": {
+                        "options": "op_jenis",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "contextBinding": "variables.op_jenis",
+                        "label": "Jenis",
+                        "layout": 0,
+                        "required": true
+                      }
+                    },
+                    {
+                      "id": "NX_iYAoUKZq",
+                      "type": "select",
+                      "name": "op_warna_tnkb",
+                      "options": {
+                        "options": "op_warna_tnkb",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "contextBinding": "variables.op_warna_tnkb",
+                        "label": "Warna TNKB",
+                        "layout": 0,
+                        "required": true
+                      }
+                    },
+                    {
+                      "id": "NX_Yhz2AFTY",
+                      "type": "select",
+                      "name": "op_model",
+                      "options": {
+                        "options": "op_model",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "contextBinding": "variables.op_model",
+                        "label": "Model",
+                        "layout": 0,
+                        "required": true
+                      }
+                    },
+                    {
+                      "id": "NX_GO6SG2Nl",
+                      "type": "text",
+                      "name": "op_tahun_registrasi",
+                      "options": {
+                        "binding": "variables.op_tahun_registrasi",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Tahun Registrasi",
+                        "layout": 0,
+                        "required": true
+                      }
+                    },
+                    {
+                      "id": "NX_UZlhmTKg",
+                      "type": "select",
+                      "name": "op_golongan",
+                      "options": {
+                        "options": "op_golongan",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "contextBinding": "variables.op_golongan",
+                        "label": "Golongan",
+                        "layout": 0,
+                        "required": true
+                      }
+                    },
+                    {
+                      "id": "NX_ilYFY2NB",
+                      "type": "text",
+                      "name": "op_tahun_pembuatan",
+                      "options": {
+                        "binding": "variables.op_tahun_pembuatan",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Tahun Pembuatan",
+                        "layout": 0,
+                        "required": true
+                      }
+                    },
+                    {
+                      "id": "NX_hABUN282",
+                      "type": "text",
+                      "name": "op_no_bpkb",
+                      "options": {
+                        "binding": "variables.op_no_bpkb",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Nomor BPKB",
+                        "layout": 0,
+                        "required": true
+                      }
+                    },
+                    {
+                      "id": "NX_ZYumKTKz",
+                      "type": "text",
+                      "name": "op_isi_silinder",
+                      "options": {
+                        "binding": "variables.op_isi_silinder",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Isi Silinder",
+                        "layout": 0,
+                        "required": true
+                      }
+                    },
+                    {
+                      "id": "NX_2lNolOJS",
+                      "type": "text",
+                      "name": "op_kode_lokasi",
+                      "options": {
+                        "binding": "variables.op_kode_lokasi",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "defaultValue": "",
+                        "label": "Kode Lokasi",
+                        "layout": 0,
+                        "readonly": false,
+                        "required": true
+                      }
+                    },
+                    {
+                      "id": "NX_8oT5ouug",
+                      "type": "text",
+                      "name": "op_no_rangka",
+                      "options": {
+                        "binding": "variables.op_no_rangka",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Nomor Rangka",
+                        "layout": 0,
+                        "required": true
+                      }
+                    },
+                    {
+                      "id": "NX_vyOFSZGv",
+                      "type": "text",
+                      "name": "op_no_urut_pendaftaran",
+                      "options": {
+                        "binding": "variables.op_no_urut_pendaftaran",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Nomor Urut Pendaftaran",
+                        "layout": 0,
+                        "required": true
+                      }
+                    },
+                    {
+                      "id": "NX_hP6iq6oT",
+                      "type": "text",
+                      "name": "op_no_mesin",
+                      "options": {
+                        "binding": "variables.op_no_mesin",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Nomor Mesin",
+                        "layout": 0,
+                        "required": true
+                      }
+                    },
+                    {
+                      "id": "NX_YSqFhAPO",
+                      "type": "date",
+                      "name": "op_tgl_berlaku",
+                      "options": {
+                        "binding": "variables.op_tgl_berlaku",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Berlaku Sampai"
+                      }
+                    },
+                    {
+                      "id": "NX_gYzzyZv6",
+                      "type": "text",
+                      "name": "op_jumlah_roda",
+                      "options": {
+                        "binding": "variables.op_jumlah_roda",
+                        "color": "#000000",
+                        "context": "nextflow_user_task",
+                        "label": "Jumlah Roda",
+                        "layout": 0,
+                        "required": true
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "context": {
+    "nextflow_user_task": {
+      "type": "next:task",
+      "hash": "d14a028c2a3a2bc9476102bb288234c415a2b01f828ea62ac5b3e42f"
+    },
+    "op_bahan_bakar": {
+      "type": "data:json",
+      "hash": "a9f00ce2566250928c55cf5c76ea9b1480a2204d0ecb513c9ce4dd30",
+      "value": [
+        {
+          "key": "BENSIN",
+          "value": "BENSIN"
+        },
+        {
+          "key": "SOLAR",
+          "value": "SOLAR"
+        },
+        {
+          "key": "PERTAMAX",
+          "value": "PERTAMAX"
+        },
+        {
+          "key": "GAS",
+          "value": "GAS"
+        },
+        {
+          "key": "LISTRIK",
+          "value": "LISTRIK"
+        },
+        {
+          "key": "HYBRID",
+          "value": "HYBRID"
+        }
+      ]
+    },
+    "op_golongan": {
+      "type": "data:json",
+      "hash": "10e1a8cbab8d15e2cbb00a6090d84c1546e95a4577d9bbc5a53a9c59",
+      "value": [
+        {
+          "key": "SEDAN",
+          "value": "SEDAN"
+        },
+        {
+          "key": "JEEP",
+          "value": "JEEP"
+        },
+        {
+          "key": "BLIND VAN",
+          "value": "BLIND VAN"
+        },
+        {
+          "key": "PICK UP",
+          "value": "PICK UP"
+        },
+        {
+          "key": "MICROBUS",
+          "value": "MICROBUS"
+        },
+        {
+          "key": "MINIBUS",
+          "value": "MINIBUS"
+        },
+        {
+          "key": "BUS",
+          "value": "BUS"
+        },
+        {
+          "key": "LIGHT TRUCK",
+          "value": "LIGHT TRUCK"
+        },
+        {
+          "key": "TRUCK",
+          "value": "TRUCK"
+        }
+      ]
+    },
+    "op_jenis": {
+      "type": "data:json",
+      "hash": "76b799c03b39a04fb0c13007b7116f882392475de1d44bded6439340",
+      "value": [
+        {
+          "key": "MOBIL PENUMPANG",
+          "value": "MOBIL PENUMPANG"
+        },
+        {
+          "key": "MOBIL BUS",
+          "value": "MOBIL BUS"
+        },
+        {
+          "key": "MOBIL BARANG",
+          "value": "MOBIL BARANG"
+        },
+        {
+          "key": "SEPEDA MOTOR",
+          "value": "SEPEDA MOTOR"
+        },
+        {
+          "key": "KENDARAAN KHUSUS",
+          "value": "KENDARAAN KHUSUS"
+        }
+      ]
+    },
+    "op_model": {
+      "type": "data:json",
+      "hash": "5cf68e9d7ed39ed0e5967f4145aa1f04f26ad50d38d06c4ef10173c8",
+      "value": [
+        {
+          "key": "MOBIL AMBULANS",
+          "value": "MOBIL AMBULANS"
+        },
+        {
+          "key": "MOBIL JENAZAH",
+          "value": "MOBIL JENAZAH"
+        },
+        {
+          "key": "MOBIL PEMADAM KEBAKARAN",
+          "value": "MOBIL PEMADAM KEBAKARAN"
+        },
+        {
+          "key": "MOBIL DEREK",
+          "value": "MOBIL DEREK"
+        },
+        {
+          "key": "MOBIL PELAYANAN KEBERSIHAN",
+          "value": "MOBIL PELAYANAN KEBERSIHAN"
+        },
+        {
+          "key": "LAINNYA",
+          "value": "LAINNYA"
+        }
+      ]
+    },
+    "op_warna_tnkb": {
+      "type": "data:json",
+      "hash": "fe1e021f0fbc82b426d5b00b13d811b97c94b1aa80f5bb236374761c",
+      "value": [
+        {
+          "key": "HITAM",
+          "value": "HITAM"
+        },
+        {
+          "key": "KUNING",
+          "value": "KUNING"
+        },
+        {
+          "key": "MERAH",
+          "value": "MERAH"
+        }
+      ]
+    },
+    "pendaftaran_jenis": {
+      "type": "data:json",
+      "hash": "bef9783d93f69b93544c3d8eb0609fa4a165d0b4112e5ab7cd752c8f",
+      "value": [
+        {
+          "key": "PKB TAHUNAN",
+          "value": "PKB TAHUNAN"
+        }
+      ]
+    },
+    "wp_kategori": {
+      "type": "data:json",
+      "hash": "88ded00450cbe3137d128499d78a218927bc08b3d29a3d2db51cf5ff",
+      "value": [
+        {
+          "key": "PRIBADI",
+          "value": "PRIBADI"
+        },
+        {
+          "key": "BADAN - ANGKUTAN UMUM",
+          "value": "BADAN - ANGKUTAN UMUM"
+        },
+        {
+          "key": "BADAN - LEMBAGA SOSIAL",
+          "value": "BADAN - LEMBAGA SOSIAL"
+        },
+        {
+          "key": "BADAN - LEMBAGA KEAGAMAAN",
+          "value": "BADAN - LEMBAGA KEAGAMAAN"
+        },
+        {
+          "key": "BADAN - DINAS PEMERINTAH",
+          "value": "BADAN - DINAS PEMERINTAH"
+        },
+        {
+          "key": "BADAN - LAINNYA",
+          "value": "BADAN - LAINNYA"
+        }
+      ]
+    }
+  }
+}
