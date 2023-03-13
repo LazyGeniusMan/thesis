@@ -65,3 +65,23 @@ Created using [NEXTFLOW](https://nextplatform.ai/product/nextflow) by [NEXTPLATF
 ![Show SKKP](img/form/07%20-%20Show%20SKKP.png)
 
 [Source Code](src/form/)
+
+## Test Case
+### Permendagri No. 1 Tahun 2021 Pasal 9(1)
+![Permendagri No. 1 Tahun 2021 Pasal 9(1)](test/Permendagri%20No.%201%20Tahun%202021%20Pasal%209(1).png)
+
+### Permendagri No. 1 Tahun 2021 Pasal 9(3)
+![Permendagri No. 1 Tahun 2021 Pasal 9(3)](test/Permendagri%20No.%201%20Tahun%202021%20Pasal%209(3).png)
+
+### Permendagri No. 1 Tahun 2021 Pasal 10(1)
+![Permendagri No. 1 Tahun 2021 Pasal 10(1)](test/Permendagri%20No.%201%20Tahun%202021%20Pasal%2010(1).png)
+
+### Permendagri No. 1 Tahun 2021 Pasal 11(1)
+![Permendagri No. 1 Tahun 2021 Pasal 11(1)](test/Permendagri%20No.%201%20Tahun%202021%20Pasal%2011(1).png)
+
+### Permendagri No. 1 Tahun 2021 Pasal 12(1)
+![Permendagri No. 1 Tahun 2021 Pasal 12(1)](test/Permendagri%20No.%201%20Tahun%202021%20Pasal%2012(1).png)
+
+Notes: 
+- UU Nomor 1 Tahun 2022 Pasal 10(1), UU Nomor 1 Tahun 2022 Pasal 10(3) & UU Nomor 1 Tahun 2022 Pasal 7(2) is indirectly tested with cases above.
+- Process Variable with `null` or `0` value will be shown as empty.
