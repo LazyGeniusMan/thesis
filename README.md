@@ -1,11 +1,13 @@
 # Undergraduate Thesis
 Business Process Automation Using Business Process Management System (Case Study on the Yearly Motor Vehicle Tax Collection Process at Samsat)
 
+Supervisor: Prof. Dr. rer. pol. Hamzah Ritchi, S.E., MBIT., Ak.
+
 Created using [NEXTFLOW](https://nextplatform.ai/product/nextflow) by [NEXTPLATFORM](https://nextplatform.ai/)
 
 ## Demo
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/CnG7P4coPq8/0.jpg)](http://www.youtube.com/watch?v=CnG7P4coPq8)
+[![Demo](http://img.youtube.com/vi/CnG7P4coPq8/0.jpg)](http://www.youtube.com/watch?v=CnG7P4coPq8)
 
 ## Business Process Model and Notation (BPMN)
 ### As-Is
